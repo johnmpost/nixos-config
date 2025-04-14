@@ -1,0 +1,51 @@
+[cursor]
+thickness = 0.05
+
+[colors.bright]
+black = "#5e5c64"
+blue = "#2a7bde"
+cyan = "#33c7de"
+green = "#33d17a"
+magenta = "#c061cb"
+red = "#f66151"
+white = "#ffffff"
+yellow = "#e9ad0c"
+
+[colors.cursor]
+cursor = "0xdddddd"
+text = "0x222222"
+
+[colors.normal]
+black = "#171421"
+blue = "#12488b"
+cyan = "#2aa1b3"
+green = "#26a269"
+magenta = "#a347ba"
+red = "#c01c28"
+white = "#d0cfcc"
+yellow = "#a2734c"
+
+[colors.primary]
+background = "0x222222"
+foreground = "0xcccccc"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 10
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+style = "Regular"
+
+[scrolling]
+history = 2000
+multiplier = 1
+
+[terminal.shell]
+program = "/bin/bash"
+
+[window]
+decorations = "full"
+opacity = 1

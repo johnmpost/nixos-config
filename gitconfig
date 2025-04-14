@@ -1,0 +1,10 @@
+[user]
+    email = muffinpost1@gmail.com
+    name = john
+[core]
+    autocrlf = input
+    safecrlf = warn
+[alias]
+    prettylog = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[push]
+    autoSetupRemote = true
