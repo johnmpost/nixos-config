@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.11";
-    impermanence.url = "github:nix-community/impermanence";1
+    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = { self, nixpkgs, home-manager, impermanence, ... }@inputs: {
