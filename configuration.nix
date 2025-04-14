@@ -41,7 +41,8 @@ in
       firefox
       alacritty
       git
-      (pkgs.nerdfonts.override { fonts = [ "Ubuntu" "UbuntuMono" ]; })
+      nerd-fonts.ubuntu
+      nerd-fonts.ubuntu-mono
       python314
       neofetch
       ripgrep
