@@ -1,15 +1,9 @@
 { config, lib, pkgs, ... }:
 
-let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
-  impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence/archive/master.tar.gz";
-in
 {
   imports =
     [
       ./hardware-configuration.nix
-      "${impermanence}/nixos.nix"
-      "${home-manager}/nixos"
     ];
 
   programs.fuse.userAllowOther = true;
@@ -30,7 +24,6 @@ in
   };
 
   home-manager.users.john = {
-    imports = [ "${impermanence}/home-manager.nix" ];
     home.stateVersion = "24.11";
 
     fonts.fontconfig.enable = true;
