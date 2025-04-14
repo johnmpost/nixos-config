@@ -66,7 +66,7 @@ alias nrbs="sudo nixos-rebuild switch"
 
 # custom commands
 maxbr () {
-  echo 255 | sudo tee /sys/class/backlight/amdgpu_bl0/brightness > /dev/null
+  echo 255 | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
 }
 
 gnc-txns () {
