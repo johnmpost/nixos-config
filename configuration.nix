@@ -64,6 +64,7 @@ in
       gnumake
       libgcc
       pkg-config
+      picom
       (pkgs.st.override { conf = builtins.readFile /etc/nixos/st-config.h;
 	patches = [
 	  (fetchpatch {
@@ -100,6 +101,7 @@ in
     home.file.".xinitrc".source = /etc/nixos/xinitrc;
     home.file.".gitconfig".source = /etc/nixos/gitconfig;
     home.file.".config/alacritty/alacritty.toml".source = /etc/nixos/alacritty.toml;
+    home.file.".config/picom/picom.conf".source = /etc/nixos/picom.conf;
 
     home.persistence."/nix/persist/home/john" = {
       directories = [
@@ -128,7 +130,7 @@ in
   services.libinput.enable = true;
   services.openssh.enable = true;
   networking.firewall.enable = false;
-  services.xserver.deviceSection = ''Option "TearFree" "true"'';
+  # services.xserver.deviceSection = ''Option "TearFree" "true"'';
   services.envfs.enable = true;
 
   hardware.graphics = {
@@ -139,17 +141,6 @@ in
   environment.systemPackages = with pkgs; [
     vim
     wget
-    # (st.overrideAttrs (oldAttrs: rec {
-      # buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
-      # patches = [
-        # (fetchpatch {
-          # url = "https://st.suckless.org/patches/clickurl/st-clickurl-0.8.5.diff";
-          # sha256 = "1a97q2hv63j2nq6vw924a6si8wg4903rbkrmml31zlhjgl9nbmq4";
-        # })
-      # ];
-      # configFile = writeText "config.def.h" (builtins.readFile /etc/nixos/st-config.h);
-      # postPatch = oldAttrs.postPatch ++ ''cp ${configFile} config.def.h'';
-    # }))
   ];
 
   system.stateVersion = "24.11"; # never change
