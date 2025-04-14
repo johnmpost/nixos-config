@@ -19,8 +19,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty msg create-window || alacritty
-bindsym $mod+semicolon exec st
+bindsym $mod+Return exec --no-startup-id alacritty msg create-window || alacritty
+bindsym $mod+semicolon exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -172,7 +172,7 @@ hide_edge_borders smart
 for_window [class=Codium] border pixel 1
 
 # open web browser
-bindsym $mod+Shift+Return exec firefox
+bindsym $mod+Shift+Return exec --no-startup-id firefox
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
