@@ -3,7 +3,7 @@
 picom &
 
 # sets root background color
-xsetroot -solid "#222222"
+hsetroot -solid "#222222"
 
 # sets key repeat delay (ms) and rate (repeats/sec)
 xset r rate 200 25

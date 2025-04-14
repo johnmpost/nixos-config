@@ -66,6 +66,7 @@ in
       pkg-config
       picom
       xorg.xmodmap
+      hsetroot
       (pkgs.st.override { conf = builtins.readFile /etc/nixos/st-config.h;
 	patches = [
 	  (fetchpatch {
