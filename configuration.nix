@@ -65,7 +65,7 @@ in
       libgcc
       pkg-config
       picom
-      xmodmap
+      xorg.xmodmap
       (pkgs.st.override { conf = builtins.readFile /etc/nixos/st-config.h;
 	patches = [
 	  (fetchpatch {
