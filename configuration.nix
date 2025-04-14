@@ -142,7 +142,9 @@ in
     enable32Bit = true;
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
+    git
     vim
     wget
   ];
