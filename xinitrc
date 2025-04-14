@@ -1,5 +1,7 @@
 #!/bin/sh
 
+picom &
+
 # sets root background color
 xsetroot -solid "#222222"
 
@@ -13,6 +15,4 @@ xset -dpms
 # enables custom keymaps on session start
 xmodmap ~/.Xmodmap
 
-# invoke global X session script
-# . /etc/X11/Xsession
 exec i3
