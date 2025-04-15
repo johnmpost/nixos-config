@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   home.stateVersion = "24.11";
@@ -7,7 +7,7 @@
 
   home.packages = with pkgs; [
     vim
-    neovim
+#     neovim
     firefox
     alacritty
     git
@@ -56,6 +56,12 @@
   programs = {
     home-manager.enable = true;
   };
+
+  programs.nixvim = {
+    enable = true;
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable.true;
+  }
 
   xdg.mimeApps = {
     enable = true;

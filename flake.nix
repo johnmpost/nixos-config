@@ -5,9 +5,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     impermanence.url = "github:nix-community/impermanence";
     impermanence.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, impermanence, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, impermanence, nixvim, ... }: {
     nixosConfigurations.john-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       # how to add unfree?
@@ -17,6 +19,7 @@
         ./configuration.nix
 	impermanence.nixosModules.impermanence
 	home-manager.nixosModules.home-manager
+	nixvim.nixosModules.nixvim
 	{
 	  imports = [ home-manager.nixosModules.home-manager ];
 	  home-manager.useGlobalPkgs = true;
