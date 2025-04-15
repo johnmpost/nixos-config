@@ -19,7 +19,6 @@
         ./configuration.nix
 	impermanence.nixosModules.impermanence
 	home-manager.nixosModules.home-manager
-	nixvim.nixosModules.nixvim
 	{
 	  imports = [ home-manager.nixosModules.home-manager ];
 	  home-manager.useGlobalPkgs = true;
@@ -27,6 +26,7 @@
 	  home-manager.users.john = { ... }: {
 	    imports = [
 	      impermanence.homeManagerModules.impermanence
+	      nixvim.homeManagerModules.nixvim
 	      ./home.nix
 	    ];
 	  };
