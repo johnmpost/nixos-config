@@ -41,7 +41,7 @@ style = "Regular"
 
 [scrolling]
 history = 2000
-multiplier = 1
+multiplier = 3
 
 [terminal.shell]
 program = "/bin/bash"

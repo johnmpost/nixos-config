@@ -7,7 +7,6 @@
 
   home.packages = with pkgs; [
     vim
-#     neovim
     firefox
     alacritty
     git
@@ -35,22 +34,6 @@
     picom
     xorg.xmodmap
     hsetroot
-    (pkgs.st.override { conf = builtins.readFile ./st-config.h;
-      patches = [
-        (fetchpatch {
-          url = "https://st.suckless.org/patches/scrollback/st-scrollback-0.9.2.diff";
-          sha256 = "0ymc5db75cwmdvv8ak3bfaf7iz4snj65fbmhrl9blv7h7pw3pdld";
-        })
-        # (fetchpatch {
-          # url = "https://st.suckless.org/patches/columnredraw/st-columnredraw-20241119-fb8569b.diff";
-          # sha256 = "1243mrpi06ldr8d7b554slhpaf02j7j4cpzrnfqanfms0mhijix5";
-        # })
-        # (fetchpatch {
-          # url = "https://st.suckless.org/patches/boxdraw/st-boxdraw_v2-0.8.5.diff";
-          # sha256 = "108h30073yb8nm9x04x7p39di8syb8f8k386iyy2mdnfdxh54r04";
-        # })
-      ];
-    })
   ];
 
   programs = {
@@ -59,8 +42,30 @@
 
   programs.nixvim = {
     enable = true;
-    colorschemes.catppuccin.enable = true;
-    plugins.lualine.enable = true;
+    opts = {
+      number = true;
+      shiftwidth = 2;
+    };
+    colorschemes.vscode.enable = true;
+    plugins = {
+      lualine.enable = true;
+      nvim-tree = {
+        enable = true;       
+	renderer.root_folder_label = false;
+      };
+    };
+    globals.mapleader = " ";
+    keymaps = [
+    {
+      key = ";";
+      action = ":";
+    }
+    {
+      key = "<leader>e";
+      action = "<cmd>NvimTreeToggle<CR>";
+      options.silent = true;
+    }
+    ];
   };
 
   xdg.mimeApps = {
