@@ -1,1 +1,1 @@
-- start alacritty on i3 startup as daemon
+- make displays auto switch when change hdmi status

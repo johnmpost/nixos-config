@@ -46,8 +46,8 @@ export TERMINAL=alacritty
 # aliases
 alias cpy="xclip -selection clipboard"
 alias pst="xclip -selection clipboard -o"
-alias dl="xrandr --output eDP --fb 1920x1080 --mode 1920x1080 --scale 1x1 --set TearFree on"
-alias dlu="xrandr --fb 2560x1080 --output eDP --mode 1920x1080 --scale-from 2560x1080 --output HDMI-A-0 --mode 2560x1080 --scale 1x1 --same-as eDP --set TearFree on --rate 74.99"
+alias dl="xrandr --output eDP --auto --output HDMI-A-0 --off --dpi 96"
+alias dlu="xrandr --output eDP --off --output HDMI-A-0 --auto --dpi 96"
 alias c=clear
 alias ga="git add -A"
 alias gc="git commit -m"
@@ -65,7 +65,7 @@ alias l="ls -lh"
 alias la="ls -lah"
 alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
-alias ns='alacritty msg create-window --working-directory $(pwd)'
+alias ns="alacritty msg create-window --working-directory $(pwd)"
 
 # custom commands
 maxbr () {
