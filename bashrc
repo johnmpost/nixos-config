@@ -41,8 +41,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export TERMINAL=alacritty
-
 # aliases
 alias cpy="xclip -selection clipboard"
 alias pst="xclip -selection clipboard -o"
@@ -65,9 +63,12 @@ alias l="ls -lh"
 alias la="ls -lah"
 alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
-alias ns="alacritty msg create-window --working-directory $(pwd)"
 
 # custom commands
+ns () {
+  alacritty msg create-window --working-directory $(pwd)
+}
+
 maxbr () {
   echo 255 | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
 }
