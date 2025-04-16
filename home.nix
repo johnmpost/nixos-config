@@ -58,6 +58,7 @@
     };
 
     plugins = {
+      web-devicons.enable = true;
       nvim-surround.enable = true;
       nvim-autopairs.enable = true;
       lualine = {
