@@ -18,11 +18,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-set $alacritty_socket /tmp/alacritty.sock
-exec --no-startup-id alacritty --daemon --socket $alacritty_socket
+# TODO i think this is failing
+exec --no-startup-id alacritty --daemon
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty --socket $alacritty_socket msg create-window --working-directory ~ || alacritty --working-directory ~
+bindsym $mod+Return exec --no-startup-id alacritty msg create-window --working-directory ~ || alacritty --working-directory ~
 
 # kill focused window
 bindsym $mod+Shift+q kill
