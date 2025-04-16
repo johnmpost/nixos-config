@@ -41,6 +41,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export $TERMINAL=alacritty
+
 # aliases
 alias cpy="xclip -selection clipboard"
 alias pst="xclip -selection clipboard -o"
@@ -63,7 +65,7 @@ alias l="ls -lh"
 alias la="ls -lah"
 alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
-alias ns='nohup "${TERMINAL:-alacritty}" >/dev/null 2>&1 &'
+alias ns='nohup "${TERMINAL}" >/dev/null 2>&1 &'
 
 # custom commands
 maxbr () {
