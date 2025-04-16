@@ -38,7 +38,6 @@
   services.openssh.enable = true;
   networking.firewall.enable = false;
   services.envfs.enable = true;
-  fonts.fontconfig.hinting.style = "full";
 
   hardware.graphics = {
     enable = true;
