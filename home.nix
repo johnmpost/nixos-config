@@ -135,10 +135,6 @@
       action = "<cmd>bd<CR>";
       options.silent = true;
     }
-    {
-      key = "<leader>t";
-      action = "<cmd>silent exec '!alacritty msg create-window --working-directory $(pwd)'<CR>";
-    }
     # TODO bufferline reorder buffers
     # TODO bufferline make separator a color and nice
     # TODO bufferline LSP feedback

@@ -64,11 +64,6 @@ alias la="ls -lah"
 alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
 
-# custom commands
-ns () {
-  alacritty msg create-window --working-directory $(pwd)
-}
-
 maxbr () {
   echo 255 | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
 }
