@@ -1,4 +1,1 @@
 - start alacritty on i3 startup as daemon
-- make terminal i3 bind force working dir ~
-- fix the ns alias
-- make it work in nvim

@@ -29,7 +29,6 @@
     xss-lock
     i3lock
     lesspipe
-    alacritty
     pkg-config
     picom
     xorg.xmodmap
@@ -137,8 +136,7 @@
     }
     {
       key = "<leader>t";
-      action = "<cmd>!ns<CR>";
-      options.silent = true;
+      action = "<cmd>silent exec '!alacritty msg create-window --working-directory $(pwd)'<CR>";
     }
     # TODO bufferline reorder buffers
     # TODO bufferline make separator a color and nice

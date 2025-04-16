@@ -65,7 +65,7 @@ alias l="ls -lh"
 alias la="ls -lah"
 alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
-alias ns='nohup "${TERMINAL}" >/dev/null 2>&1 &'
+alias ns='alacritty msg create-window --working-directory $(pwd)'
 
 # custom commands
 maxbr () {

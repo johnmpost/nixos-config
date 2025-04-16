@@ -43,6 +43,10 @@
     enable = true;
     enable32Bit = true;
   };
+  
+  security.sudo.extraConfig = ''
+    Defaults	timestamp_timeout=10
+  '';
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [

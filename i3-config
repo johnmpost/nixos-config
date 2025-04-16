@@ -18,9 +18,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+exec --no-startup-id alacritty --daemon
+
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty msg create-window || alacritty
-bindsym $mod+semicolon exec --no-startup-id st
+bindsym $mod+Return exec --no-startup-id alacritty msg create-window --working-directory ~ || alacritty --working-directory ~
 
 # kill focused window
 bindsym $mod+Shift+q kill
