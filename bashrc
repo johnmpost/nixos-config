@@ -41,7 +41,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export $TERMINAL=alacritty
+export TERMINAL=alacritty
 
 # aliases
 alias cpy="xclip -selection clipboard"
