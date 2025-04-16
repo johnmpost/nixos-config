@@ -46,14 +46,36 @@
       number = true;
       shiftwidth = 2;
     };
+
     colorschemes.vscode.enable = true;
+
     plugins = {
-      lualine.enable = true;
+      lualine = {
+        enable = true;
+	settings.options.disabled_filetypes = [ "NvimTree" ];
+      };
       nvim-tree = {
         enable = true;       
-	renderer.root_folder_label = false;
+	renderer.rootFolderLabel = false;
+      };
+      telescope.enable = true;
+      bufferline = {
+        enable = true;
+	settings.highlights.buffer_selected.italic = false;
+	settings.options = {
+	  show_buffer_close_icons = false;
+	  offsets = [{
+	    filetype = "NvimTree";
+	    text = "Files";
+	    highlight = "Directory";
+	    separator = true;
+	  }];
+	  persist_buffer_sort = false;
+	  separator_style = "thin";
+	};
       };
     };
+
     globals.mapleader = " ";
     keymaps = [
     {
@@ -65,7 +87,44 @@
       action = "<cmd>NvimTreeToggle<CR>";
       options.silent = true;
     }
-    ];
+    {
+      key = "<leader>ff";
+      action = "<cmd>Telescope find_files<CR>";
+      options.silent = true;
+    }
+    {
+      key = "<leader>fg";
+      action = "<cmd>Telescope git_files<CR>";
+      options.silent = true;
+    }
+    {
+      key = "<leader>fb";
+      action = "<cmd>Telescope buffers<CR>";
+      options.silent = true;
+    }
+    {
+      key = "<leader>s";
+      action = "<cmd>w<CR>";
+      options.silent = true;
+    }
+    {
+      key = "<leader>x";
+      action = "<cmd>bd<CR>";
+      options.silent = true;
+    }
+    # TODO bufferline reorder buffers
+    # TODO bufferline make unselected color different
+    # TODO bufferline make separator a color and nice
+    # TODO bufferline LSP feedback
+    ] ++ 
+    (let
+      keys = [1 2 3 4 5 6];
+    in
+    map (i: {
+      key = "<A-${toString i}>";
+      action = "<cmd>lua require('bufferline').go_to(${toString i}, true)<CR>";
+      options.silent = true;
+    }) keys);
   };
 
   xdg.mimeApps = {
