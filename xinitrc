@@ -2,6 +2,8 @@
 
 picom &
 
+xrandr --dpi 96
+
 # sets root background color
 hsetroot -solid "#222222"
 
