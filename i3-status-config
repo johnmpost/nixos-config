@@ -13,7 +13,7 @@ order += "volume master"
 order += "tztime local"
 
 disk "/" {
-	format = "  %percentage_used"
+	format = "   %percentage_used"
 }
 
 cpu_temperature 0 {
@@ -52,7 +52,7 @@ tztime local {
 }
 
 cpu_usage {
-        format = "  %usage"
+        format = "  %usage"
 }
 
 memory {
