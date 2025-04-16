@@ -45,11 +45,22 @@
     opts = {
       number = true;
       shiftwidth = 2;
+      ignorecase = true;
+      smartcase = true;
     };
 
-    colorschemes.vscode.enable = true;
+    colorschemes.vscode = {
+      enable = true;
+      settings = {
+        group_overrides = {
+	  Comment = { fg = "#5A5A5A"; bg = "NONE"; };
+	};
+      };
+    };
 
     plugins = {
+      nvim-surround.enable = true;
+      nvim-autopairs.enable = true;
       lualine = {
         enable = true;
 	settings.options.disabled_filetypes = [ "NvimTree" ];
@@ -57,11 +68,13 @@
       nvim-tree = {
         enable = true;       
 	renderer.rootFolderLabel = false;
+	hijackCursor = true;
       };
       telescope.enable = true;
       bufferline = {
         enable = true;
 	settings.highlights.buffer_selected.italic = false;
+	settings.highlights.buffer_selected.bold = false;
 	settings.options = {
 	  show_buffer_close_icons = false;
 	  offsets = [{
@@ -103,6 +116,16 @@
       options.silent = true;
     }
     {
+      key = "<leader>fg";
+      action = "<cmd>Telescope live_grep<CR>";
+      options.silent = true;
+    }
+    {
+      key = "<leader>fw";
+      action = "<cmd>Telescope grep_word<CR>";
+      options.silent = true;
+    }
+    {
       key = "<leader>s";
       action = "<cmd>w<CR>";
       options.silent = true;
@@ -112,8 +135,12 @@
       action = "<cmd>bd<CR>";
       options.silent = true;
     }
+    {
+      key = "<leader>t";
+      action = "<cmd>!ns<CR>";
+      options.silent = true;
+    }
     # TODO bufferline reorder buffers
-    # TODO bufferline make unselected color different
     # TODO bufferline make separator a color and nice
     # TODO bufferline LSP feedback
     ] ++ 

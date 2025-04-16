@@ -63,6 +63,7 @@ alias l="ls -lh"
 alias la="ls -lah"
 alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
+alias ns='nohup "${TERMINAL:-alacritty}" >/dev/null 2>&1 &'
 
 # custom commands
 maxbr () {
