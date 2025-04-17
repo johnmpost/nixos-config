@@ -7,7 +7,6 @@
 
   home.packages = with pkgs; [
     vim
-    firefox
     alacritty
     git
     nerd-fonts.ubuntu
@@ -33,6 +32,7 @@
     picom
     xorg.xmodmap
     hsetroot
+    jq
   ];
 
   programs = {
@@ -149,6 +149,125 @@
     }) keys);
   };
 
+  programs.firefox = {
+    enable = true;
+    profiles.john = {
+      bookmarks.force = true;
+      bookmarks.settings = [
+	{
+	  name = "wordhippo";
+	  url = "https://www.wordhippo.com/";
+	  keyword = "wh";
+	}
+	{
+	  name = "weekly schedule";
+	  url = "https://docs.google.com/spreadsheets/d/1T7pv9OEUOwneCyT_gWwv8L3Ykr2PFgJnjjEycnBEcvU/edit?gid=404477156#gid=404477156";
+	  keyword = "wk";
+	}
+	{
+	  name = "snapchat";
+	  url = "https://web.snapchat.com";
+	  keyword = "snap";
+	}
+	{
+	  name = "wordcount";
+	  url = "https://wordcount.com";
+	  keyword = "wc";
+	}
+	{
+	  name = "youtube search";
+	  url = "https://www.youtube.com/results?search_query=%s";
+	  keyword = "yt";
+	}
+	{
+	  name = "chatgpt";
+	  url = "https://chatgpt.com";
+	  keyword = "chat";
+	}
+	{
+	  name = "github repos";
+	  url = "https://github.com/johnmpost?tab=repositories";
+	  keyword = "repos";
+	}
+	{
+	  name = "github profile";
+	  url = "https://github.com/johnmpost";
+	  keyword = "gh";
+	}
+	{
+	  name = "monkeytype";
+	  url = "https://monkeytype.com";
+	  keyword = "type";
+	}
+	{
+	  name = "drive 0";
+	  url = "https://drive.google.com/drive/u/0/folders/1hMAgupSZvhAml0K1WhBi9sNINfvkhw0e";
+	  keyword = "drive0";
+	}
+	{
+	  name = "drive 1";
+	  url = "https://drive.google.com/drive/u/1";
+	  keyword = "drive1";
+	}
+	{
+	  name = "myred";
+	  url = "https://myred.nebraska.edu";
+	  keyword = "myred";
+	}
+	{
+	  name = "notion calendar";
+	  url = "https://www.notion.so/79d6718360ad44b687ff5e8e2679b6fb?v=f21dd02db27241cd8a0c69f7b23adcb7";
+	  keyword = "cal";
+	}
+	{
+	  name = "canvas bstrat";
+	  url = "https://canvas.unl.edu/courses/191595";
+	  keyword = "cbs";
+	}
+	{
+	  name = "canvas bre";
+	  url = "https://canvas.unl.edu/courses/191689";
+	  keyword = "cbre";
+	}
+	{
+	  name = "canvas network security";
+	  url = "https://canvas.unl.edu/courses/188643";
+	  keyword = "cns";
+	}
+	{
+	  name = "canvas design studio";
+	  url = "https://canvas.unl.edu/courses/188623";
+	  keyword = "cds";
+	}
+	{
+	  name = "notion todo";
+	  url = "https://www.notion.so/79d6718360ad44b687ff5e8e2679b6fb?v=99054cadfeec433dbcd96790208e3961";
+	  keyword = "todo";
+	}
+	{
+	  name = "mail 1";
+	  url = "https://mail.google.com/mail/u/1";
+	  keyword = "mail1";
+	}
+	{
+	  name = "mail 0";
+	  url = "https://mail.google.com/mail/u/0";
+	  keyword = "mail0";
+	}
+	{
+	  name = "mail outlook";
+	  url = "https://outlook.office.com/mail/";
+	  keyword = "mailo";
+	}
+	{
+	  name = "discord";
+	  url = "https://discord.com/app";
+	  keyword = "dis";
+	}
+      ];
+    };
+  };
+
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
@@ -168,7 +287,6 @@
 
   home.persistence."/nix/persist/home/john" = {
     directories = [
-      ".mozilla"
       ".ssh"
       "dl"
     ];
