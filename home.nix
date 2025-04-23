@@ -185,7 +185,6 @@
 	"privacy.trackingprotection.enabled" = true;
 	"privacy.trackingprotection.pbmode.enabled" = true;
 	"privacy.donottrackheader.enabled" = true;
-	"privacy.resistFingerprinting" = true;
 	"signon.rememberSignons" = false;
 	"extensions.formautofill.creditCards.enabled" = false;
 	"extensions.formautofill.addresses.enabled" = false;
@@ -328,13 +327,6 @@
     defaultApplications = {
       "x-scheme-handler/http" = "firefox.desktop";
       "x-scheme-handler/https" = "firefox.desktop";
-    };
-  };
-
-  gtk = {
-    enable = true;
-    gtk3.extraConfig = {
-      "gtk-application-prefer-dark-theme" = "1";
     };
   };
 
