@@ -14,6 +14,7 @@
       "/var/log"
       "/etc/NetworkManager/system-connections"
       "/var/db/sudo/lectured"
+      "/var/lib/systemd/backlight"
     ];
   };
 
