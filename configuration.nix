@@ -18,7 +18,7 @@
     ];
   };
 
-  environment.etc.environment.source = "./global-env"
+  environment.etc.environment.source = "./global-env";
 
   users.mutableUsers = false;
   users.users.john = {
