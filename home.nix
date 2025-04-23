@@ -135,6 +135,11 @@
       action = "<cmd>bd<CR>";
       options.silent = true;
     }
+    {
+      key = "<leader>r";
+      action = "<cmd>Telescope oldfiles cwd_only=true<CR>";
+      options.silent = true;
+    }
     # TODO bufferline reorder buffers
     # TODO bufferline make separator a color and nice
     # TODO bufferline LSP feedback
