@@ -18,10 +18,6 @@
     ];
   };
 
-  environment.etc.environment.text = ''
-    MOZ_USE_XINPUT2=1
-  '';
-
   users.mutableUsers = false;
   users.users.john = {
     isNormalUser = true;
@@ -44,6 +40,10 @@
   services.openssh.enable = true;
   networking.firewall.enable = false;
   services.envfs.enable = true;
+
+  environment.sessionVariables = {
+    MOZ_USE_XINPUT2 = "1";
+  };
 
   hardware.graphics = {
     enable = true;
