@@ -152,6 +152,33 @@
   programs.firefox = {
     enable = true;
     profiles.john = {
+      search = {
+	force = true;
+	default = "ddg";
+      };
+      settings = {
+	"dom.security.https_only_mode" = true;
+	"privacy.trackingprotection.enabled" = true;
+	"privacy.trackingprotection.pbmode.enabled" = true;
+	"privacy.donottrackheader.enabled" = true;
+	"signon.rememberSignons" = false;
+	"extensions.formautofill.creditCards.enabled" = false;
+	"extensions.formautofill.addresses.enabled" = false;
+	"browser.urlbar.suggest.quicksuggest.sponsored" = false;
+	"browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+	"browser.newtabpage.activity-stream.feeds.topsites" = false;
+	"browser.toolbars.bookmarks.visibility" = "never";
+	"browser.download.useDownloadDir" = false;
+	"full-screen-api.ignore-widgets" = true;
+	"browser.tabs.firefox-view" = false;
+	"browser.gesture.swipe.left" = false;
+	"browser.gesture.swipe.right" = false;
+	"pdfjs.sidebarViewOnLoad" = 0;
+	"identity.fxaccounts.enabled" = false;
+	"browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+	"browser.uitour.enabled" = false;
+	"toolkit.telemetry.enabled" = false;
+      };
       bookmarks.force = true;
       bookmarks.settings = [
 	{
@@ -289,9 +316,13 @@
     directories = [
       ".ssh"
       "dl"
+      "repos"
+      ".mozilla/firefox/john/storage"
     ];
     files = [
       ".bash_history"
+      ".mozilla/firefox/john/places.sqlite"
+      ".mozilla/firefox/john/cookies.sqlite"
     ];
     allowOther = true;
   };
