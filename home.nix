@@ -183,6 +183,8 @@
 	"browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
 	"browser.uitour.enabled" = false;
 	"toolkit.telemetry.enabled" = false;
+	# prefer dark website content
+	"layout.css.prefers-color-scheme.content-override" = 2;
       };
       bookmarks.force = true;
       bookmarks.settings = [
