@@ -166,6 +166,7 @@
 	"privacy.trackingprotection.enabled" = true;
 	"privacy.trackingprotection.pbmode.enabled" = true;
 	"privacy.donottrackheader.enabled" = true;
+	"privacy.resistFingerprinting" = true;
 	"signon.rememberSignons" = false;
 	"extensions.formautofill.creditCards.enabled" = false;
 	"extensions.formautofill.addresses.enabled" = false;
@@ -184,7 +185,7 @@
 	"browser.uitour.enabled" = false;
 	"toolkit.telemetry.enabled" = false;
 	# prefer dark website content
-	"layout.css.prefers-color-scheme.content-override" = 2;
+	"layout.css.prefers-color-scheme.content-override" = 0;
       };
       bookmarks.force = true;
       bookmarks.settings = [
