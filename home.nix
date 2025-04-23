@@ -160,9 +160,16 @@
       search = {
 	force = true;
 	default = "ddg";
+	engines = {
+	  ddg = {
+	    name = "DuckDuckGo";
+	    urls = [{template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}";}];
+	    icon = "https://duckduckgo.com/favicon.ico";
+	  };
+	};
       };
       settings = {
-        "browser.aboutconfig.showWarning" = false;
+        "browser.aboutConfig.showWarning" = false;
 	"dom.security.https_only_mode" = true;
 	"privacy.trackingprotection.enabled" = true;
 	"privacy.trackingprotection.pbmode.enabled" = true;
