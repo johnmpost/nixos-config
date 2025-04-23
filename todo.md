@@ -1,4 +1,4 @@
-- make displays auto switch when change hdmi status
-- firefox dark mode
 - firefox layout config
-- firefox color scheme
+- firefox custom colors
+- better toggling of nvim tree
+- figure out optimal venvs
