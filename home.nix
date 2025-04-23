@@ -105,6 +105,7 @@
       action = "<cmd>Telescope find_files<CR>";
       options.silent = true;
     }
+    # TODO fix double map
     {
       key = "<leader>fg";
       action = "<cmd>Telescope git_files<CR>";
@@ -159,12 +160,19 @@
     profiles.john = {
       search = {
 	force = true;
-	default = "ddg";
+	default = "ddgc";
+	privateDefault = "ddgc";
+	order = [ "ddgc" "google" "wikipedia" ];
 	engines = {
-	  ddg = {
-	    name = "DuckDuckGo";
+	  bing.metaData.hidden = true;
+	  ddg.metaData.hidden = true;
+	  google.metaData.alias = "!g";
+	  wikipedia.metaData.alias = "!w";
+	  ddgc = {
+	    name = "DuckDuckGo (themed)";
 	    urls = [{template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}";}];
 	    icon = "https://duckduckgo.com/favicon.ico";
+	    definedAliases = [ "!d" ];
 	  };
 	};
       };
