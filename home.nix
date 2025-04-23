@@ -326,7 +326,7 @@
       ".ssh"
       "dl"
       "repos"
-      ".mozilla/firefox/john/storage"
+      ".mozilla/firefox/john/storage/default"
     ];
     files = [
       ".bash_history"
