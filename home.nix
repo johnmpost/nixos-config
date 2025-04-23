@@ -162,6 +162,7 @@
 	default = "ddg";
       };
       settings = {
+        "browser.aboutconfig.showWarning" = false;
 	"dom.security.https_only_mode" = true;
 	"privacy.trackingprotection.enabled" = true;
 	"privacy.trackingprotection.pbmode.enabled" = true;
