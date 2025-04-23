@@ -41,8 +41,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export MOZ_USE_XINPUT2=1
-
 # aliases
 alias cpy="xclip -selection clipboard"
 alias pst="xclip -selection clipboard -o"

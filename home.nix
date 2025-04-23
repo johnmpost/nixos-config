@@ -162,21 +162,23 @@
 	force = true;
 	default = "ddgc";
 	privateDefault = "ddgc";
-	order = [ "ddgc" "google" "wikipedia" ];
 	engines = {
 	  bing.metaData.hidden = true;
 	  ddg.metaData.hidden = true;
-	  google.metaData.alias = "!g";
-	  wikipedia.metaData.alias = "!w";
+	  google.metaData.hidden = true;
+	  wikipedia.metaData.hidden = true;
 	  ddgc = {
 	    name = "DuckDuckGo (themed)";
-	    urls = [{template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}";}];
+	    urls = [{ template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}"; }];
 	    icon = "https://duckduckgo.com/favicon.ico";
-	    definedAliases = [ "!d" ];
+	    definedAliases = [ "d" ];
 	  };
 	};
       };
       settings = {
+        "browser.urlbar.shortcuts.bookmarks" = false;
+        "browser.urlbar.shortcuts.history" = false;
+        "browser.urlbar.shortcuts.tabs" = false;
         "browser.aboutConfig.showWarning" = false;
 	"dom.security.https_only_mode" = true;
 	"privacy.trackingprotection.enabled" = true;
