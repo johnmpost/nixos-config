@@ -18,7 +18,9 @@
     ];
   };
 
-  environment.etc.environment.source = "./global-env";
+  environment.etc.environment.text = ''
+    MOZ_USE_XINPUT2=1
+  '';
 
   users.mutableUsers = false;
   users.users.john = {

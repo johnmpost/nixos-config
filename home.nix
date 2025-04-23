@@ -175,6 +175,7 @@
 	  };
 	};
       };
+
       settings = {
         "browser.urlbar.shortcuts.bookmarks" = false;
         "browser.urlbar.shortcuts.history" = false;
@@ -205,6 +206,7 @@
 	# prefer dark website content
 	"layout.css.prefers-color-scheme.content-override" = 0;
       };
+
       bookmarks.force = true;
       bookmarks.settings = [
 	{
@@ -326,6 +328,13 @@
     defaultApplications = {
       "x-scheme-handler/http" = "firefox.desktop";
       "x-scheme-handler/https" = "firefox.desktop";
+    };
+  };
+
+  gtk = {
+    enable = true;
+    gtk3.extraConfig = {
+      "gtk-application-prefer-dark-theme" = "1";
     };
   };
 
