@@ -2,3 +2,4 @@
 - firefox custom colors
 - better toggling of nvim tree
 - figure out optimal venvs
+- configure keepassxc settings OR switch to something else

@@ -33,6 +33,9 @@
     xorg.xmodmap
     hsetroot
     jq
+    openssl
+    zip
+    unzip
   ];
 
   programs = {
