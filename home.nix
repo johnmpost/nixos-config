@@ -210,6 +210,7 @@
 	# don't show about:welcome on first launch
 	"browser.aboutwelcome.enabled" = false;
         "startup.homepage_welcome_url" = "";
+	"datareporting.policy.dataSubmissionPolicyBypassNotification" = true;
       };
 
       bookmarks.force = true;
