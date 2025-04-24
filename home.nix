@@ -207,10 +207,27 @@
 	"toolkit.telemetry.enabled" = false;
 	# prefer dark website content
 	"layout.css.prefers-color-scheme.content-override" = 0;
-	# don't show about:welcome on first launch
+	# don't show about:welcome or privacy page on first launch
 	"browser.aboutwelcome.enabled" = false;
-        "startup.homepage_welcome_url" = "";
 	"datareporting.policy.dataSubmissionPolicyBypassNotification" = true;
+	# make toolbar slimmer
+	"browser.uidensity" = 1;
+	# disable pocket
+	"extensions.pocket.enabled" = false;
+	# keep window open when closing all tabs
+	"browser.tabs.closeWindowWithLastTab" = false;
+	# allegedly disable addon recommendations
+	"browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
+	# allegedly disable feature recommendations
+	"browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
+	# customize toolbar
+	"browser.uiCustomization.state" = builtins.toJSON {
+	  placements = {
+	    TabsToolbar = [ "tabbrowser-tabs" "new-tab-button" ];
+	    nav-bar = ["back-button" "forward-button" "stop-reload-button" "urlbar-container" "downloads-button" "unified-extensions-button"];
+	    toolbar-menubar = ["menubar-items"];
+	  };
+	};
       };
 
       bookmarks.force = true;
