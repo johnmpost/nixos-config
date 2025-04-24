@@ -174,7 +174,6 @@
 	    name = "DuckDuckGo (themed)";
 	    urls = [{ template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}"; }];
 	    icon = "https://duckduckgo.com/favicon.ico";
-	    definedAliases = [ "d" ];
 	  };
 	};
       };
@@ -231,9 +230,29 @@
       bookmarks.force = true;
       bookmarks.settings = [
 	{
-	  name = "wordhippo";
-	  url = "https://www.wordhippo.com/";
-	  keyword = "wh";
+	  name = "thesaurus search";
+	  url = "https://www.wordhippo.com/what-is/another-word-for/%s.html";
+	  keyword = "t";
+	}
+	{
+	  name = "youtube search";
+	  url = "https://www.youtube.com/results?search_query=%s";
+	  keyword = "yt";
+	}
+	{
+	  name = "wikipedia search";
+	  url = "https://en.wikipedia.org/wiki/Special:Search?search=%s";
+	  keyword = "w";
+	}
+	{
+	  name = "dictionary search";
+	  url = "https://www.wordnik.com/words/%s";
+	  keyword = "d";
+	}
+	{
+	  name = "github go to repo";
+	  url = "https://github.com/johnmpost/%s";
+	  keyword = "repo";
 	}
 	{
 	  name = "weekly schedule";
@@ -251,17 +270,12 @@
 	  keyword = "wc";
 	}
 	{
-	  name = "youtube search";
-	  url = "https://www.youtube.com/results?search_query=%s";
-	  keyword = "yt";
-	}
-	{
 	  name = "chatgpt";
 	  url = "https://chatgpt.com";
 	  keyword = "chat";
 	}
 	{
-	  name = "github repos";
+	  name = "github my repos";
 	  url = "https://github.com/johnmpost?tab=repositories";
 	  keyword = "repos";
 	}
@@ -278,12 +292,12 @@
 	{
 	  name = "drive 0";
 	  url = "https://drive.google.com/drive/u/0/folders/1hMAgupSZvhAml0K1WhBi9sNINfvkhw0e";
-	  keyword = "drive0";
+	  keyword = "d0";
 	}
 	{
 	  name = "drive 1";
 	  url = "https://drive.google.com/drive/u/1";
-	  keyword = "drive1";
+	  keyword = "d1";
 	}
 	{
 	  name = "myred";
@@ -323,17 +337,17 @@
 	{
 	  name = "mail 1";
 	  url = "https://mail.google.com/mail/u/1";
-	  keyword = "mail1";
+	  keyword = "m1";
 	}
 	{
 	  name = "mail 0";
 	  url = "https://mail.google.com/mail/u/0";
-	  keyword = "mail0";
+	  keyword = "m0";
 	}
 	{
 	  name = "mail outlook";
 	  url = "https://outlook.office.com/mail/";
-	  keyword = "mailo";
+	  keyword = "mo";
 	}
 	{
 	  name = "discord";
