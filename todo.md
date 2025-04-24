@@ -1,7 +1,8 @@
 - firefox custom colors
-- firefox search bangs
 - firefox addons
 - better toggling of nvim tree
 - fix fg nvim bind
 - figure out optimal venvs
 - configure keepassxc settings OR switch to something else
+- nvim switch to lua files
+- nvim add hledger setup

@@ -223,12 +223,24 @@
 	"devtools.toolbox.host" = "right";
 	# don't show "open previous tabs?" toolbar, hopefully still allow functionality
 	"browser.startup.couldRestoreSession.count" = -1;
+	# allow custom css for theming
+	"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 	# customize toolbar
 	"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","vertical-spacer","stop-reload-button","urlbar-container","downloads-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action","reset-pbm-toolbar-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list","vertical-tabs"],"currentVersion":21,"newElementCount":7}'';
       };
 
+      userChrome = ''
+        .tab-background {
+          background-color: #1e1e1e !important;
+      '';
+
       bookmarks.force = true;
       bookmarks.settings = [
+	{
+	  name = "google search";
+	  url = "https://www.google.com/search?q=%s";
+	  keyword = "g";
+	}
 	{
 	  name = "thesaurus search";
 	  url = "https://www.wordhippo.com/what-is/another-word-for/%s.html";
