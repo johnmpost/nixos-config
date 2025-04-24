@@ -207,6 +207,9 @@
 	"toolkit.telemetry.enabled" = false;
 	# prefer dark website content
 	"layout.css.prefers-color-scheme.content-override" = 0;
+	# don't show about:welcome on first launch
+	"browser.aboutwelcome.enabled" = false;
+        "startup.homepage_welcome_url" = "";
       };
 
       bookmarks.force = true;
