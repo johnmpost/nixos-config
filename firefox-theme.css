@@ -36,6 +36,18 @@
   /* url bar text */
   --toolbar-field-color: rgb(255, 255, 255) !important;
   --toolbar-field-focus-color: rgb(255, 255, 255) !important;
+  /* search popup highlight */
+  --urlbarView-highlight-color: blue !important;
+  --urlbarView-highlight-background: red !important;
+  --urlbarView-highlight-outline: purple !important;
+
+  /* sidebar (history, etc) */
+  --lwt-sidebar-background-color: rgb(34, 34, 34) !important;
+  --lwt-sidebar-text-color: rgb(170, 170, 170) !important
 }
 
-#navigator-toolbox { border-bottom: white !important; }
+#navigator-toolbox { border-bottom-color: rgb(34, 34, 34) !important; }
+
+/* sidebar header */
+#sidebar-box{ --sidebar-background-color: rgb(34, 34, 34) !important; }
+#sidebar-box{ --sidebar-text-color: rgb(170, 170, 170) !important; }
