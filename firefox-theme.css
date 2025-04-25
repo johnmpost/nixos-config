@@ -23,7 +23,11 @@
   --toolbox-bgcolor: rgb(34, 34, 34) !important;
   --toolbox-bgcolor-inactive: rgb(34, 34, 34) !important;
 
-  /* tabs toolbar
+  /* tab preview popup */
+  --arrowpanel-background: rgb(34, 34, 34) !important;
+  --arrowpanel-border-color: rgb(34, 34, 34) !important;
+  --arrowpanel-color: rgb(170, 170, 170) !important;
+  --arrowpanel-dimmed: rgba(0, 0, 0, 0.4) !important;
 
   /* toolbar icons, text, and bg */
   --toolbarbutton-icon-fill: rgb(136, 136, 136) !important;
@@ -51,4 +55,3 @@
   --toolbar-field-color: rgb(255, 255, 255) !important;
   --toolbar-field-focus-color: rgb(255, 255, 255) !important;
 }
-
