@@ -37,9 +37,7 @@
   --toolbar-field-color: rgb(255, 255, 255) !important;
   --toolbar-field-focus-color: rgb(255, 255, 255) !important;
   /* search popup highlight */
-  --urlbarView-highlight-color: blue !important;
-  --urlbarView-highlight-background: red !important;
-  --urlbarView-highlight-outline: purple !important;
+  --urlbarView-highlight-background: rgb(68, 68, 68) !important;
 
   /* sidebar (history, etc) */
   --lwt-sidebar-background-color: rgb(34, 34, 34) !important;
