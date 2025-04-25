@@ -1,53 +1,54 @@
+/*
+ *       "toolbar": "rgb(34, 34, 34)",
+      "toolbar_text": "rgb(170, 170, 170)",
+      "frame": "rgb(34, 34, 34)",
+      "tab_background_text": "rgb(136, 136, 136)",
+      "toolbar_field": "rgb(17, 17, 17)",
+      "toolbar_field_text": "rgb(255, 255, 255)",
+      "tab_line": "rgb(35, 205, 179)",
+      "popup": "rgb(34, 34, 34)",
+      "popup_text": "rgb(136, 136, 136)",
+      "ntp_background": "rgb(34, 34, 34)",
+      "ntp_text": "rgb(136, 136, 136)",
+      "toolbar_bottom_separator": "rgb(34, 34, 34)",
+      "toolbar_top_separator": "rgb(34, 34, 34)",
+      "tab_loading": "rgb(35, 205, 179)"
+      */
+
+/* requires built-in dark theme */
 :root {
-  /* "toolbar": "rgb(12, 76, 125)", */
-  --toolbar-bgcolor: rgb(34, 34, 34) !important;
-  /* "toolbar_text": "rgb(255, 255, 255)", */
-  --toolbar-color: rgb(170, 170, 170) !important;
   /* "frame": "rgb(7, 43, 71)" */
   --lwt-accent-color: rgb(34, 34, 34) !important;
   --lwt-accent-color-inactive: rgb(34, 34, 34) !important;
   --toolbox-bgcolor: rgb(34, 34, 34) !important;
   --toolbox-bgcolor-inactive: rgb(34, 34, 34) !important;
-  /* "tab_background_text": "rgb(255, 255, 255)", */
+
+  /* tabs toolbar
+
+  /* toolbar icons, text, and bg */
+  --toolbarbutton-icon-fill: rgb(136, 136, 136) !important;
+  --toolbar-color: rgb(170, 170, 170) !important;
+  --toolbar-bgcolor: rgb(34, 34, 34) !important;
+
+  /* tab text and outline */
   --lwt-text-color: rgb(136, 136, 136) !important;
-  /* "toolbar_field": "rgb(3, 18, 30)", (search bar) */
+  --lwt-tab-line-color: rgb(35, 205, 179) !important;
+
+  /* selected tab text and bg */
+  --tab-selected-textcolor: rgb(170, 170, 170) !important;
+  --tab-selected-bgcolor: rgb(34, 34, 34) !important;
+
+  /* the loading spinner in new tabs */
+  --tab-loading-fill: rgb(35, 205, 179) !important;
+
+  /* url bar border when unfocused and focused */
+  --toolbar-field-border-color: rgb(34, 34, 34) !important;
+  --toolbar-field-focus-border-color: rgb(35, 205, 179) !important;
+  /* url bar background*/
   --toolbar-field-background-color: rgb(17, 17, 17) !important;
   --toolbar-field-focus-background-color: rgb(17, 17, 17) !important;
-  /* "toolbar_field_text": "rgb(255, 255, 255)", (search text)*/
+  /* url bar text */
   --toolbar-field-color: rgb(255, 255, 255) !important;
   --toolbar-field-focus-color: rgb(255, 255, 255) !important;
-  /* "tab_line": "rgb(3, 18, 30)", */
-  --lwt-tab-line-color: rgb(34, 34, 34) !important;
-  /* "popup": "rgba(29, 29, 30, 0.99)", */
-  --arrowpanel-background: rgba(34, 34, 34) !important;
-  /* "popup_text": "rgb(255, 255, 255)", */
-  --arrowpanel-color: rgb(136, 136, 136) !important;
-  /* "tab_loading": "rgb(3, 18, 30)" */
-  --tab-loading-fill: rgb(35, 205, 179) !important;
-  /* "button_background_active": "rgb(255, 86, 3)", */
-  /*--toolbarbutton-active-background: rgb(136, 136, 136) !important;*/
-  /* "icons": "rgb(255, 255, 255)", */
-  --toolbarbutton-icon-fill: rgb(136, 136, 136) !important;
-  /* "ntp_text": "rgb(255, 255, 255)", */
-  --newtab-text-primary-color: rgb(136, 136, 136) !important;
-  /* "popup_highlight_text": "rgb(255, 255, 255)", */
-  --urlbarView-highlight-color: rgb(136, 136, 136) !important;
-  /* "sidebar_highlight_text": "rgb(255, 255, 255)", */
-  /*--urlbarView-highlight-color: rgb(255, 255, 255) !important;*/
-  /* "sidebar_text": "rgb(255, 255, 255)", */
-  /*--sidebar-text-color: rgb(255, 255, 255) !important;*/
-
-  /* Others*/
-  --tab-selected-textcolor: rgb(255, 255, 255) !important;
-  --tab-selected-bgcolor: rgb() !important;
-  --toolbar-field-border-color: rgba(0, 0, 0) !important;
-  --button-background-color-hover: rgba(255, 86, 3, 0.8) !important;
-  --button-background-color-active: rgba(255, 86, 3, 0.8) !important;
-  --urlbarView-hover-background: rgba(255, 86, 3, 0.8) !important;
-  --panel-separator-zap-gradient: linear-gradient(
-    90deg,
-    #9059ff 0%,
-    #ff4aa2 52.08%,
-    #ffbd4f 100%
-  ) !important;
 }
+
