@@ -1,4 +1,3 @@
-- firefox custom colors
 - firefox addons
 - better toggling of nvim tree
 - fix fg nvim bind
@@ -6,3 +5,4 @@
 - configure keepassxc settings OR switch to something else
 - nvim switch to lua files
 - nvim add hledger setup
+- break out into files per app

@@ -42,6 +42,9 @@
   /* sidebar (history, etc) */
   --lwt-sidebar-background-color: rgb(34, 34, 34) !important;
   --lwt-sidebar-text-color: rgb(170, 170, 170) !important;
+
+  /* new tab flash */
+  --in-content-page-background: rgb(34, 34, 34) !important;
 }
 
 #navigator-toolbox { border-bottom-color: rgb(34, 34, 34) !important; }
@@ -49,3 +52,9 @@
 /* sidebar header */
 #sidebar-box{ --sidebar-background-color: rgb(34, 34, 34) !important; }
 #sidebar-box{ --sidebar-text-color: rgb(170, 170, 170) !important; }
+
+#browser vbox#appcontent tabbrowser,
+#content, #tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html
+{ background: var(--in-content-page-background) !important }
