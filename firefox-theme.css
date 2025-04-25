@@ -41,7 +41,7 @@
 
   /* sidebar (history, etc) */
   --lwt-sidebar-background-color: rgb(34, 34, 34) !important;
-  --lwt-sidebar-text-color: rgb(170, 170, 170) !important
+  --lwt-sidebar-text-color: rgb(170, 170, 170) !important;
 }
 
 #navigator-toolbox { border-bottom-color: rgb(34, 34, 34) !important; }

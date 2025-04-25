@@ -232,6 +232,7 @@
       };
 
       userChrome = builtins.readFile ./firefox-theme.css;
+      userContent = builtins.readFile ./userContent.css;
 
       bookmarks.force = true;
       bookmarks.settings = [
