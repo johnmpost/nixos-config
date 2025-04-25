@@ -204,6 +204,8 @@
 	"browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
 	"browser.uitour.enabled" = false;
 	"toolkit.telemetry.enabled" = false;
+	# don't show tab x button on background tabs ever
+	"browser.tabs.tabClipWidth" = 999;
 	# prefer dark website content
 	"layout.css.prefers-color-scheme.content-override" = 0;
 	# don't show about:welcome or privacy page on first launch
