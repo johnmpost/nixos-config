@@ -78,6 +78,14 @@
 	action = ":";
       }
       {
+	key = "<C-h>";
+	action = "<C-w>h";
+      }
+      {
+	key = "<C-l>";
+	action = "<C-w>l";
+      }
+      {
 	key = "<C-n>";
 	action = "<cmd>NvimTreeToggle<CR>";
 	options.silent = true;
