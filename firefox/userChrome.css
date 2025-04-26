@@ -45,6 +45,11 @@
 
   /* new tab flash */
   --in-content-page-background: rgb(34, 34, 34) !important;
+
+  /* maybe ctrl-f search bg */
+  --input-bgcolor: rgb(68, 68, 68) !important;
+  /* separator line above ctrl-f, maybe more */
+  --chrome-content-separator-color: rgb(34, 34, 34) !important;
 }
 
 #navigator-toolbox { border-bottom-color: rgb(34, 34, 34) !important; }

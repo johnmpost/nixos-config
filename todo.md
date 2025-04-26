@@ -5,6 +5,4 @@
 - nvim switch to lua files
 - nvim add hledger setup
 - break out into files per app
-- firefox ctrl-f colors
-- firefox extension order in toolbar
 - neovim add ctrl+p for telescope find
