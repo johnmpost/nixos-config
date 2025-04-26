@@ -1,5 +1,6 @@
 { inputs, pkgs, ... }: {
   enable = true;
+
   opts = {
     number = true;
     shiftwidth = 2;
@@ -20,22 +21,29 @@
     };
   };
 
+  extraConfigLua = ''
+    require("nvim-tree").config.renderer.hidden_display = "all"
+  '';
+
   plugins = {
     web-devicons.enable = true;
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
+
     lualine = {
       enable = true;
       settings.options.disabled_filetypes = [ "NvimTree" ];
     };
+
     nvim-tree = {
       enable = true;       
       renderer.rootFolderLabel = false;
-      renderer.hidden_display = "all"
       hijackCursor = true;
       filters.custom = [ "^\\.git$" ];
     };
+
     telescope.enable = true;
+
     bufferline = {
       enable = true;
       settings.highlights.buffer_selected.italic = false;
@@ -106,9 +114,6 @@
     action = "<cmd>Telescope oldfiles cwd_only=true<CR>";
     options.silent = true;
   }
-  # TODO bufferline reorder buffers
-  # TODO bufferline make separator a color and nice
-  # TODO bufferline LSP feedback
   ] ++ 
   (let
     keys = [1 2 3 4 5 6];
@@ -118,3 +123,4 @@
     action = "<cmd>lua require('bufferline').go_to(${toString i}, true)<CR>";
     options.silent = true;
   }) keys);
+}
