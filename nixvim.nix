@@ -10,6 +10,10 @@
   colorschemes.vscode = {
     enable = true;
     settings = {
+      disable_nvimtree_bg = true;
+      color_overrides = {
+	vscBack = "#222222";
+      };
       group_overrides = {
 	Comment = { fg = "#5A5A5A"; bg = "NONE"; };
       };
