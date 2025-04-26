@@ -96,6 +96,10 @@
 	options.silent = true;
       }
       {
+	key = "<C-p>";
+	action = "<leader>ff";
+      }
+      {
 	key = "<leader>ff";
 	action = "<cmd>Telescope find_files<CR>";
 	options.silent = true;
