@@ -97,7 +97,8 @@
       }
       {
 	key = "<C-p>";
-	action = "<leader>ff";
+	action = "<cmd>Telescope find_files<CR>";
+	options.silent = true;
       }
       {
 	key = "<leader>ff";
