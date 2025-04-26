@@ -1,5 +1,3 @@
-- better toggling of nvim tree
-- fix fg nvim bind
 - figure out optimal venvs
 - configure keepassxc settings OR switch to something else (then get browser ext)
 - nvim add hledger setup

@@ -63,64 +63,69 @@
   };
 
   globals.mapleader = " ";
-  keymaps = [
-  {
-    key = ";";
-    action = ":";
-  }
-  {
-    key = "<leader>e";
-    action = "<cmd>NvimTreeToggle<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>ff";
-    action = "<cmd>Telescope find_files<CR>";
-    options.silent = true;
-  }
-  # TODO fix double map
-  {
-    key = "<leader>fg";
-    action = "<cmd>Telescope git_files<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>fb";
-    action = "<cmd>Telescope buffers<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>fg";
-    action = "<cmd>Telescope live_grep<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>fw";
-    action = "<cmd>Telescope grep_word<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>s";
-    action = "<cmd>w<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>x";
-    action = "<cmd>bd<CR>";
-    options.silent = true;
-  }
-  {
-    key = "<leader>r";
-    action = "<cmd>Telescope oldfiles cwd_only=true<CR>";
-    options.silent = true;
-  }
-  ] ++ 
-  (let
-    keys = [1 2 3 4 5 6];
-  in
-  map (i: {
-    key = "<A-${toString i}>";
-    action = "<cmd>lua require('bufferline').go_to(${toString i}, true)<CR>";
-    options.silent = true;
-  }) keys);
+
+  keymaps =
+    let
+      numberKeys = map (i: {
+	key = "<A-${toString i}>";
+	action = "<cmd>lua require('bufferline').go_to(${toString i}, true)<CR>";
+	options.silent = true;
+      }) [1 2 3 4 5 6];
+    in
+    numberKeys ++ [
+      {
+	key = ";";
+	action = ":";
+      }
+      {
+	key = "<C-n>";
+	action = "<cmd>NvimTreeToggle<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>e";
+	action = "<cmd>NvimTreeFocus<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>ff";
+	action = "<cmd>Telescope find_files<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>fa";
+	action = "<cmd>:lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>fg";
+	action = "<cmd>Telescope live_grep<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>fw";
+	action = "<cmd>Telescope grep_string<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>fb";
+	action = "<cmd>Telescope buffers<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>fo";
+	action = "<cmd>Telescope oldfiles cwd_only=true<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<C-s>";
+	action = "<cmd>w<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>x";
+	action = "<cmd>bd<CR>";
+	options.silent = true;
+      }
+    ];
 }
