@@ -6,4 +6,3 @@
 - nvim add hledger setup
 - break out into files per app
 - firefox ctrl-f colors
-- firefox don't create ~/Downloads

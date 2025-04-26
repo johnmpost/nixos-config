@@ -225,6 +225,9 @@
 	"browser.newtabpage.activity-stream.feeds.section.topstories" = false;
 	"browser.newtabpage.activity-stream.feeds.topsites" = false;
 	"browser.toolbars.bookmarks.visibility" = "never";
+	# set default download dir (to avoid Download dir creation)
+	"browser.download.dir" = "/home/john/dl";
+	# but don't use it
 	"browser.download.useDownloadDir" = false;
 	"full-screen-api.ignore-widgets" = true;
 	"browser.tabs.firefox-view" = false;
