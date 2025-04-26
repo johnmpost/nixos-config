@@ -206,7 +206,7 @@
       # };
 
       settings = {
-        # try enforce built-in dark theme
+        # enforce built-in dark theme
 	"extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         # don't force manual enablement of extensions on first launch
         "extensions.autoDisableScopes" = 0;
