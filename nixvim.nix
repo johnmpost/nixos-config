@@ -31,7 +31,9 @@
     nvim-tree = {
       enable = true;       
       renderer.rootFolderLabel = false;
+      renderer.hidden_display = "all"
       hijackCursor = true;
+      filters.custom = [ "^\\.git$" ];
     };
     telescope.enable = true;
     bufferline = {
@@ -116,4 +118,3 @@
     action = "<cmd>lua require('bufferline').go_to(${toString i}, true)<CR>";
     options.silent = true;
   }) keys);
-}
