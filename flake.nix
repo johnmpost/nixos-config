@@ -7,6 +7,10 @@
     impermanence.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, impermanence, nixvim, ... }: {
@@ -24,6 +28,7 @@
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
 	  home-manager.backupFileExtension = "backup";
+	  home-manager.extraSpecialArgs = { inherit inputs; };
 	  home-manager.users.john = { ... }: {
 	    imports = [
 	      impermanence.homeManagerModules.impermanence

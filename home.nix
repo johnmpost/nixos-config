@@ -178,7 +178,36 @@
 	};
       };
 
+      extensions.force = true;
+      extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+	ublock-origin
+	vimium
+      ];
+      extensions.settings."uBlock0@raymondhill.net".settings = {
+	selectedFilterLists = [
+	  "ublock-filters"
+	  "ublock-badware"
+	  "ublock-privacy"
+	  "ublock-quick-fixes"
+	  "ublock-unbreak"
+	  "easylist-chat"
+	  "easylist-newsletters"
+	  "easylist-notifications"
+	  "easylist-annoyances"
+	  "adguard-mobile-app-banners"
+	  "adguard-other-annoyances"
+	  "adguard-popup-overlays"
+	  "adguard-widgets"
+	  "ublock-annoyances"
+	];
+      };
+      # extensions.settings."{d7742d87-e61d-4b78-b8a1-b469842139fa}".settings = {
+# 
+      # };
+
       settings = {
+        # don't force manual enablement of extensions on first launch
+        "extensions.autoDisableScopes" = 0;
         "browser.urlbar.shortcuts.bookmarks" = false;
         "browser.urlbar.shortcuts.history" = false;
         "browser.urlbar.shortcuts.tabs" = false;
