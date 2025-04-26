@@ -206,6 +206,8 @@
       # };
 
       settings = {
+        # try enforce built-in dark theme
+	"extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         # don't force manual enablement of extensions on first launch
         "extensions.autoDisableScopes" = 0;
         "browser.urlbar.shortcuts.bookmarks" = false;
@@ -226,8 +228,8 @@
 	"browser.download.useDownloadDir" = false;
 	"full-screen-api.ignore-widgets" = true;
 	"browser.tabs.firefox-view" = false;
-	"browser.gesture.swipe.left" = false;
-	"browser.gesture.swipe.right" = false;
+	"browser.gesture.swipe.left" = "";
+	"browser.gesture.swipe.right" = "";
 	"pdfjs.sidebarViewOnLoad" = 0;
 	"identity.fxaccounts.enabled" = false;
 	"browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
