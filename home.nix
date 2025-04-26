@@ -205,6 +205,15 @@
 # 
       # };
 
+      policies = {
+	ExtensionSettings = {
+	  "batterdarkerdocs@threethan.github.io" = {
+	    install_url = "https://addons.mozilla.org/firefox/downloads/latest/better-darker-docs/latest.xpi";
+	    installation_mode = "force_installed";
+	  };
+	};
+      };
+
       settings = {
         # enforce built-in dark theme
 	"extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
@@ -238,8 +247,6 @@
 	"browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
 	"browser.uitour.enabled" = false;
 	"toolkit.telemetry.enabled" = false;
-	# don't show tab x button on background tabs ever
-	"browser.tabs.tabClipWidth" = 999;
 	# prefer dark website content
 	"layout.css.prefers-color-scheme.content-override" = 0;
 	# don't show about:welcome or privacy page on first launch
