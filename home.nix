@@ -160,6 +160,16 @@
 
   programs.firefox = {
     enable = true;
+
+    policies = {
+      ExtensionSettings = {
+	"batterdarkerdocs@threethan.github.io" = {
+	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/better-darker-docs/latest.xpi";
+	  installation_mode = "force_installed";
+	};
+      };
+    };
+
     profiles.john = {
       search = {
 	force = true;
@@ -200,18 +210,6 @@
 	  "adguard-widgets"
 	  "ublock-annoyances"
 	];
-      };
-      # extensions.settings."{d7742d87-e61d-4b78-b8a1-b469842139fa}".settings = {
-# 
-      # };
-
-      policies = {
-	ExtensionSettings = {
-	  "batterdarkerdocs@threethan.github.io" = {
-	    install_url = "https://addons.mozilla.org/firefox/downloads/latest/better-darker-docs/latest.xpi";
-	    installation_mode = "force_installed";
-	  };
-	};
       };
 
       settings = {
@@ -269,7 +267,7 @@
 	# allow custom css for theming
 	"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 	# customize toolbar
-	"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","vertical-spacer","stop-reload-button","urlbar-container","downloads-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action","reset-pbm-toolbar-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list","vertical-tabs"],"currentVersion":21,"newElementCount":7}'';
+	"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","vertical-spacer","stop-reload-button","urlbar-container","downloads-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action","reset-pbm-toolbar-button","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","batterdarkerdocs_threethan_github_io-browser-action","unified-extensions-button","_e8ffc3db-2875-4c7f-af38-d03e7f7f8ab9_-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","_e8ffc3db-2875-4c7f-af38-d03e7f7f8ab9_-browser-action","batterdarkerdocs_threethan_github_io-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list","vertical-tabs","unified-extensions-area"],"currentVersion":21,"newElementCount":9}'';
       };
 
       userChrome = builtins.readFile ./firefox/userChrome.css;
