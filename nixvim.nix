@@ -107,7 +107,7 @@
       }
       {
 	key = "<leader>fa";
-	action = "<cmd>:lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<CR>";
+	action = "<cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<CR>";
 	options.silent = true;
       }
       {
@@ -138,6 +138,16 @@
       {
 	key = "<leader>x";
 	action = "<cmd>bd<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<A-z>";
+	action = "<cmd>set wrap!<CR>";
+	options.silent = true;
+      }
+      {
+	key = "<leader>k";
+	action = "<cmd>lua vim.diagnostic.open_float()<CR>";
 	options.silent = true;
       }
     ];
