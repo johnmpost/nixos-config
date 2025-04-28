@@ -23,6 +23,10 @@
     };
   };
 
+  highlight."@comment".link = "Comment";
+  highlight."SpecialChar".fg = "#FFD602";
+  highlight."@ledger.negative".link = "ErrorMsg";
+
   filetype.extension = { pv = "proverif"; };
 
   extraConfigLua = ''
@@ -33,8 +37,6 @@
     web-devicons.enable = true;
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
-
-    ledger.enable = true;
 
     rainbow-delimiters = {
       enable = true;

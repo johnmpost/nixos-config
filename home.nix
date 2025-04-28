@@ -43,6 +43,8 @@
   };
 
   programs.nixvim = (import ./nixvim.nix { inherit inputs pkgs; });
+  home.file.".config/nvim/queries/ledger/highlights.scm".source = ./nvim/queries/ledger/highlights.scm;
+
 
   programs.firefox = {
     enable = true;
