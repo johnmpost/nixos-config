@@ -34,6 +34,8 @@
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
 
+    ledger.enable = true;
+
     rainbow-delimiters = {
       enable = true;
       highlight = [
@@ -79,6 +81,18 @@
       };
     };
   };
+
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "koraa/proverif.vim";
+      src = pkgs.fetchFromGitHub {
+	  owner = "koraa";
+	  repo = "proverif.vim";
+	  rev = "7ff704a";
+	  hash = "sha256-4nL8R2H6lJZcNjl0DUqlNkyPB+sJjExekhIKVmgKrCY=";
+      };
+    })
+  ];
 
   globals.mapleader = " ";
 
