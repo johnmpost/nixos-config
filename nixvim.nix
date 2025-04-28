@@ -17,9 +17,13 @@
       };
       group_overrides = {
 	Comment = { fg = "#5A5A5A"; bg = "NONE"; };
+	RainbowDelimiterYellow = { fg = "#FFD602"; bg = "NONE"; };
+	RainbowDelimiterViolet = { fg = "#DA70D6"; bg = "NONE"; };
       };
     };
   };
+
+  filetype.extension = { pv = "proverif"; };
 
   extraConfigLua = ''
     require("nvim-tree").config.renderer.hidden_display = "all"
@@ -29,6 +33,20 @@
     web-devicons.enable = true;
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
+
+    rainbow-delimiters = {
+      enable = true;
+      highlight = [
+	"RainbowDelimiterYellow"
+	"RainbowDelimiterViolet"
+	"RainbowDelimiterBlue"
+      ];
+    };
+
+    treesitter = {
+      enable = true;
+      settings.highlight.enable = true;
+    };
 
     lualine = {
       enable = true;
