@@ -124,6 +124,8 @@
 	"browser.download.dir" = "/home/john/dl";
 	# but don't use it
 	"browser.download.useDownloadDir" = false;
+	# but actually don't use it
+	"browser.download.folderList" = 2;
 	"full-screen-api.ignore-widgets" = true;
 	"browser.tabs.firefox-view" = false;
 	"browser.gesture.swipe.left" = "";
