@@ -82,6 +82,13 @@
 	separator_style = "thin";
       };
     };
+
+    cmp = {
+      enable = true;
+      settings.sources = [
+	{ name = "hledger"; }
+      ];
+    };
   };
 
   extraPlugins = [
@@ -93,6 +100,16 @@
 	  rev = "7ff704a";
 	  hash = "sha256-4nL8R2H6lJZcNjl0DUqlNkyPB+sJjExekhIKVmgKrCY=";
       };
+    })
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "cmp_hledger";
+      src = pkgs.fetchFromGitHub {
+	  owner = "kirasok";
+	  repo = "cmp-hledger";
+	  rev = "ea2211c";
+	  hash = "sha256-5P6PsCop8wFdFkCPpShAoCj1ygryOo4VQUZQn+0CNdo=";
+      };
+      dependencies = with pkgs; [ vimPlugins.nvim-cmp ];
     })
   ];
 
