@@ -299,6 +299,11 @@
 	  url = "https://discord.com/app";
 	  keyword = "dis";
 	}
+	{
+	  name = "downloads";
+	  url = "file:///home/john/dl";
+	  keyword = "dl";
+	}
       ];
     };
   };
