@@ -36,6 +36,7 @@
     openssl
     zip
     unzip
+    feh
   ];
 
   programs = {
