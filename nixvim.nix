@@ -66,11 +66,6 @@
 
     telescope.enable = true;
 
-    lspconfig = {
-      enable = true;
-
-    };
-
     bufferline = {
       enable = true;
       settings.highlights.buffer_selected.italic = false;

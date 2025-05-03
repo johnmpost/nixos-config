@@ -37,6 +37,7 @@
     zip
     unzip
     feh
+    proverif
   ];
 
   programs = {
