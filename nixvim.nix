@@ -29,10 +29,6 @@
 
   filetype.extension = { pv = "proverif"; };
 
-  extraConfigLua = ''
-    require("nvim-tree").config.renderer.hidden_display = "all"
-  '';
-
   plugins = {
     web-devicons.enable = true;
     nvim-surround.enable = true;
