@@ -15,6 +15,7 @@
       "/etc/NetworkManager/system-connections"
       "/var/db/sudo/lectured"
       "/var/lib/systemd/backlight"
+      "/etc/wireguard"
     ];
   };
 
@@ -40,6 +41,22 @@
   services.openssh.enable = true;
   networking.firewall.enable = false;
   services.envfs.enable = true;
+
+  networking.firewall.allowedUDBPorts = [ 45340 ];
+  networking.wireguard.enable = true;
+  networking.wireguard.interfaces = {
+    wg0 = {
+      ips = [ "192.168.2.2/32" ];
+      listenPost = 45340;
+      privateKeyFile = "/etc/wireguard/private";
+      peers = [{
+	publicKey = "W+ibWlojM0wHDb2e7uMgu26pLA1Cm/4CqDXcWzRDGkg=";
+	allowedIPs = [ "192.168.1.0/24" ];
+	endpoint = "173.233.47.202:45340";
+	persistentKeepalive = 25;
+      }];
+    };
+  };
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
