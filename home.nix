@@ -38,6 +38,7 @@
     unzip
     feh
     proverif
+    wkhtmltopdf
   ];
 
   programs = {
