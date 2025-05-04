@@ -334,6 +334,7 @@
       "dl"
       "repos"
       ".mozilla/firefox/john/storage/default"
+      ".cache/mozilla/firefox/john"
     ];
     files = [
       ".bash_history"
