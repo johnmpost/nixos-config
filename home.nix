@@ -39,6 +39,7 @@
     feh
     proverif
     wkhtmltopdf
+    rclone
   ];
 
   programs = {
