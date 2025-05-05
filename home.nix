@@ -328,12 +328,14 @@
   home.file.".config/alacritty/alacritty.toml".source = ./alacritty.toml;
   home.file.".config/picom/picom.conf".source = ./picom.conf;
   home.file.".Xmodmap".source = ./Xmodmap;
+  home.file.".config/rclone/rclone.conf".source = ./rclone.conf;
 
   home.persistence."/nix/persist/home/john" = {
     directories = [
       ".ssh"
       "dl"
       "repos"
+      "files"
       ".mozilla/firefox/john/storage/default"
       ".cache/mozilla/firefox/john"
     ];
