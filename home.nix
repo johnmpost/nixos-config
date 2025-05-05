@@ -109,6 +109,8 @@
       };
 
       settings = {
+        # middle mouse button don't paste
+	"middlemouse.paste" = false;
         # enforce built-in dark theme
 	"extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         # don't force manual enablement of extensions on first launch
