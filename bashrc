@@ -65,6 +65,7 @@ alias hl=hledger
 alias nrbs="sudo nixos-rebuild switch"
 alias ne="cd /etc/nixos; nvim"
 alias x="exit"
+alias s="sudo -v"
 
 maxbr () {
   echo 255 | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
