@@ -77,8 +77,12 @@ gnc-txns () {
   | tac
 }
 
-pdf () {
-    firefox -new-window "$1"
+ff () {
+  firefox --new-tab "$1"
+}
+
+ffw () {
+  firefox --new-window "$1"
 }
 
 combine_files() {
