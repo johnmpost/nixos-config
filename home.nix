@@ -307,7 +307,7 @@
 	}
 	{
 	  name = "downloads";
-	  url = "file:///home/john/dl";
+	  url = "file:///home/john/dl/%s";
 	  keyword = "dl";
 	}
       ];
