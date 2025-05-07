@@ -85,7 +85,6 @@
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
 	ublock-origin
 	vimium
-	better-canvas
 	darkreader
       ];
       extensions.settings."uBlock0@raymondhill.net".settings = {
@@ -325,6 +324,8 @@
       "x-scheme-handler/https" = "firefox.desktop";
     };
   };
+
+  xsession.numlock.enable = true;
 
   home.file.".config/i3/config".source = ./i3-config;
   home.file.".config/i3/status-config".source = ./i3-status-config;

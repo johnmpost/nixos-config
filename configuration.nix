@@ -42,8 +42,6 @@
   networking.firewall.enable = false;
   services.envfs.enable = true;
 
-  xsession.numlock.enable = true;
-
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
   };
