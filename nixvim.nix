@@ -71,7 +71,6 @@
     lspconfig.enable = true;
     comment = {
       enable = true;
-      settings.toggler.line = "<leader>/";
     };
 
     conform-nvim = {
