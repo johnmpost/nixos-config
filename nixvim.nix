@@ -51,8 +51,6 @@
       };
 
       settings.formatters = {
-        # this don't work because nix unstable hledger is broken
-	# and we can't get latest version of hledger
 	hledgerfmt = {
 	  command = "sh";
 	  args = {

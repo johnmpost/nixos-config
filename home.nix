@@ -20,7 +20,7 @@
     gnucash
     hledger
     xclip
-    nodejs_23
+    nodejs_24
     keepassxc
     ffmpeg_6
     pulseaudio
@@ -309,7 +309,7 @@
 	}
 	{
 	  name = "nix package search";
-	  url = "https://search.nixos.org/packages?query=%s";
+	  url = "https://search.nixos.org/packages?channel=unstable&query=%s";
 	  keyword = "nixp";
 	}
       ];
