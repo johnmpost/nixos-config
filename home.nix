@@ -72,6 +72,8 @@
 	  ddg.metaData.hidden = true;
 	  google.metaData.hidden = true;
 	  wikipedia.metaData.hidden = true;
+	  amazon.metaData.hidden = true;
+	  ebay.metaData.hidden = true;
 	  ddgc = {
 	    name = "DuckDuckGo (themed)";
 	    urls = [{ template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}"; }];
@@ -124,6 +126,8 @@
 	"extensions.formautofill.creditCards.enabled" = false;
 	"extensions.formautofill.addresses.enabled" = false;
 	"browser.urlbar.suggest.quicksuggest.sponsored" = false;
+        # hide weather on new tab page
+	"browser.newtabpage.activity-stream.showWeather" = false;
 	"browser.newtabpage.activity-stream.feeds.section.topstories" = false;
 	"browser.newtabpage.activity-stream.feeds.topsites" = false;
 	"browser.toolbars.bookmarks.visibility" = "never";
