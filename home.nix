@@ -59,10 +59,6 @@
 	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/better-darker-docs/latest.xpi";
 	  installation_mode = "force_installed";
 	};
-	"{8927f234-4dd9-48b1-bf76-44a9e153eee0}" = {
-	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/better-canvas/latest.xpi";
-	  installation_mode = "force_installed";
-	};
       };
     };
 
@@ -88,6 +84,8 @@
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
 	ublock-origin
 	vimium
+	better-canvas
+	darkreader
       ];
       extensions.settings."uBlock0@raymondhill.net".settings = {
 	selectedFilterLists = [

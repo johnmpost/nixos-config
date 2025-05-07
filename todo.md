@@ -5,3 +5,4 @@
 - bufferline reorder buffers
 - bufferline LSP feedback
 - comment with space /
+- vimium disable on colab and certain other sites
