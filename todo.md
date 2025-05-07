@@ -6,3 +6,4 @@
 - comment highlighted
 - vimium disable on colab and certain other sites
 - don't use /etc/nixos but a dir in ~/repos
+- fix weird windowing when closing a buffer while tree is open

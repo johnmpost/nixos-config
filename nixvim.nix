@@ -279,5 +279,10 @@
 	action = "<cmd>lua vim.diagnostic.open_float()<CR>";
 	options.silent = true;
       }
+      {
+	key = "<leader>ca";
+	action = "<cmd>lua vim.lsp.buf.code_action()<CR>";
+	options.silent = true;
+      }
     ];
 }
