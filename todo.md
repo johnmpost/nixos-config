@@ -1,6 +1,7 @@
 - figure out optimal venvs
 - configure keepassxc settings OR switch to something else (then get browser ext)
-- nvim add hledger setup
+- nvim add hledger lsp and formatter
 - break out into files per app
 - bufferline reorder buffers
 - bufferline LSP feedback
+- comment with space /
