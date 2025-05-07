@@ -6,6 +6,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    gnucash
     vim
     alacritty
     git
@@ -307,6 +308,11 @@
 	  name = "downloads";
 	  url = "file:///home/john/dl/%s";
 	  keyword = "dl";
+	}
+	{
+	  name = "nix package search";
+	  url = "https://search.nixos.org/packages?query=%s";
+	  keyword = "nixp";
 	}
       ];
     };
