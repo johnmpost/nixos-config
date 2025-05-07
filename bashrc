@@ -67,6 +67,25 @@ alias ne="cd /etc/nixos; nvim"
 alias x="exit"
 alias s="sudo -v"
 
+files () {
+    case "$1" in
+        status)
+            rclone bisync /home/john/files/ marvin:/srv/nfs/storage1/new-nas/john/ --create-empty-src-dirs --dry-run
+            ;;
+        sync)
+            rclone bisync /home/john/files/ marvin:/srv/nfs/storage1/new-nas/john/ --create-empty-src-dirs -v
+            ;;
+        resync)
+	    echo "To confirm, copy the command and remove --dry-run to perform a resync."
+            echo "rclone bisync /home/john/files/ marvin:/srv/nfs/storage1/new-nas/john/ --create-empty-src-dirs --resync -v --dry-run"
+            ;;
+        *)
+            echo "Usage: files {push|status}"
+            return 1
+            ;;
+    esac
+}
+
 maxbr () {
   echo 255 | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
 }
