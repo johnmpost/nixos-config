@@ -33,6 +33,51 @@
     web-devicons.enable = true;
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
+    comment = {
+      enable = true;
+      settings.toggler.line = "<leader>/";
+    };
+
+    conform-nvim = {
+      enable = true;
+      settings.formatters_by_ft = {
+	lua = [ "stylua" ];
+	css = [ "prettier" ];
+	html = [ "prettier" ];
+	typescript = [ "prettier" ];
+	ledger = [ "hledgerfmt" ];
+	markdown = [ "prettier" ];
+	"*" = [ "trim_newlines" ];
+      };
+
+      settings.formatters = {
+        # this don't work because nix unstable hledger is broken
+	# and we can't get latest version of hledger
+	hledgerfmt = {
+	  command = "sh";
+	  args = {
+	    __unkeyed-1 = "-c";
+	    __unkeyed-2 =
+	    ''
+	      {
+		tmpfile=$(mktemp) || exit 1
+		trap 'rm -f "$tmpfile"' EXIT
+		cat - > "$tmpfile"
+		{
+		  awk '/^[0-9]{4}-[0-9]{2}-[0-9]{2}/ {exit} {print}' "$tmpfile"
+		  hledger print -n -f "$tmpfile" --round=soft -x --pager=N
+		} || cat "$tmpfile"
+	      }
+	    '';
+	  };
+	};
+      };
+
+      settings.format_on_save = {
+	timeout_ms = 500;
+	lsp_fallback = true;
+      };
+    };
 
     rainbow-delimiters = {
       enable = true;

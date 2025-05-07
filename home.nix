@@ -6,7 +6,6 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    gnucash
     vim
     alacritty
     git
