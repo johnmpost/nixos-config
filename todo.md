@@ -1,8 +1,8 @@
 - figure out optimal venvs
 - configure keepassxc settings OR switch to something else (then get browser ext)
-- nvim add hledger lsp and formatter
 - break out into files per app
 - bufferline reorder buffers
 - bufferline LSP feedback
-- comment with space /
+- comment highlighted
 - vimium disable on colab and certain other sites
+- don't use /etc/nixos but a dir in ~/repos

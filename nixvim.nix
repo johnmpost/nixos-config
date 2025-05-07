@@ -8,6 +8,12 @@
     smartcase = true;
   };
 
+  diagnostic.settings = {
+    virtual_text = true;
+    underline = true;
+    signs = false;
+  };
+
   colorschemes.vscode = {
     enable = true;
     settings = {
@@ -29,10 +35,40 @@
 
   filetype.extension = { pv = "proverif"; };
 
+  lsp = {
+    servers.lua_ls.enable = true;
+    servers.nil_ls.enable = true;
+    servers.ts_ls.enable = true;
+    servers.efm = {
+      enable = true;
+      settings.filetypes = { __unkeyed-1 = "ledger"; };
+      settings.settings = {
+	root_markers = [ ".git/" ];
+	languages = {
+	  ledger = {
+	    __unkeyed-1 = {
+	      lintCommand = "hledger check --strict -f - 2>&1";
+	      lintStdin = true;
+	      lintFormats = [
+		"%Ehledger: Error: %f:%l-%e:"
+		"%Ehledger: Error: %f:%l:%c:"
+		"%Ehledger: Error: %f:%l:"
+		"%C%.%#|%.%#"
+		"%C%^%m%#"
+	      ];
+	      lintIgnoreExitCode = true;
+	    };
+	  };
+	};
+      };
+    };
+  };
+
   plugins = {
     web-devicons.enable = true;
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
+    lspconfig.enable = true;
     comment = {
       enable = true;
       settings.toggler.line = "<leader>/";
@@ -63,7 +99,7 @@
 		cat - > "$tmpfile"
 		{
 		  awk '/^[0-9]{4}-[0-9]{2}-[0-9]{2}/ {exit} {print}' "$tmpfile"
-		  hledger print -n -f "$tmpfile" --round=soft -x --pager=N
+		  hledger print -n -f "$tmpfile" --round=soft -x
 		} || cat "$tmpfile"
 	      }
 	    '';
