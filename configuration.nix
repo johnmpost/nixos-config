@@ -40,7 +40,8 @@
   services.libinput.enable = true;
   services.openssh.enable = true;
   networking.firewall.enable = false;
-  services.envfs.enable = true;
+  services.envfs.enable = true; # not sure what this line is for
+  security.pam.services.i3lock.enable = true;
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
@@ -64,4 +65,3 @@
 
   system.stateVersion = "24.11";
 }
-
