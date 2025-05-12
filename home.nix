@@ -40,6 +40,7 @@
     proverif
     wkhtmltopdf
     rclone
+    youtube-dl
   ];
 
   programs = {
