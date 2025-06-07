@@ -39,6 +39,7 @@
   services.libinput.touchpad.naturalScrolling = true;
   services.libinput.enable = true;
   services.openssh.enable = true;
+  services.ratbagd.enable = true;
   networking.firewall.enable = false;
   services.envfs.enable = true; # not sure what this line is for
   security.pam.services.i3lock.enable = true;

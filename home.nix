@@ -41,6 +41,9 @@
     wkhtmltopdf
     rclone
     yt-dlp
+    vlc
+    imagemagick
+    piper
   ];
 
   programs = {
