@@ -45,7 +45,7 @@ fi
 alias cpy="xclip -selection clipboard"
 alias pst="xclip -selection clipboard -o"
 alias dl="xrandr --output eDP --auto --output HDMI-A-0 --off --dpi 96"
-alias dlu="xrandr --output eDP --off --output HDMI-A-0 --auto --dpi 96"
+alias dlu="xrandr --output eDP --off --output HDMI-A-0 --auto --dpi 110"
 alias c=clear
 alias ga="git add -A"
 alias gc="git commit -m"
