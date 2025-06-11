@@ -44,6 +44,7 @@
     vlc
     imagemagick
     piper
+    ddcutil
   ];
 
   programs = {
