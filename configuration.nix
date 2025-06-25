@@ -43,6 +43,7 @@
   networking.firewall.enable = false;
   services.envfs.enable = true; # not sure what this line is for
   security.pam.services.i3lock.enable = true;
+  programs.nix-ld.enable = true;
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";

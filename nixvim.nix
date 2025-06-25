@@ -39,6 +39,7 @@
     servers.lua_ls.enable = true;
     servers.nil_ls.enable = true;
     servers.ts_ls.enable = true;
+    servers.jsonls.enable = true;
     servers.efm = {
       enable = true;
       settings.filetypes = { __unkeyed-1 = "ledger"; };
@@ -69,6 +70,7 @@
     nvim-surround.enable = true;
     nvim-autopairs.enable = true;
     lspconfig.enable = true;
+    cmp-nvim-lsp.enable = true;
     comment = {
       enable = true;
     };
@@ -80,6 +82,8 @@
 	css = [ "prettier" ];
 	html = [ "prettier" ];
 	typescript = [ "prettier" ];
+	json = [ "prettier" ];
+	jsonc = [ "prettier" ];
 	ledger = [ "hledgerfmt" ];
 	markdown = [ "prettier" ];
 	"*" = [ "trim_newlines" ];
@@ -161,10 +165,12 @@
       enable = true;
       settings.sources = [
 	{ name = "hledger"; }
+	{ name = "nvim_lsp"; }
       ];
       settings.mapping = {
 	"<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
 	"<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+	"<CR>" = "cmp.mapping.confirm({select = false})";
       };
     };
   };
