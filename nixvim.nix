@@ -213,15 +213,15 @@
 	action = ":";
       }
       {
-	key = "<C-h>";
+	key = "<A-h>";
 	action = "<C-w>h";
       }
       {
-	key = "<C-l>";
+	key = "<A-l>";
 	action = "<C-w>l";
       }
       {
-	key = "<C-n>";
+	key = "<A-n>";
 	action = "<cmd>NvimTreeToggle<CR>";
 	options.silent = true;
       }
