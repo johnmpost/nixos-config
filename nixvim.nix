@@ -258,13 +258,18 @@
 	options.silent = true;
       }
       {
-	key = "<leader>fg";
-	action = "<cmd>telescope.builtin.live_grep({ search_dirs = git ls-files })<CR>";
-	options.silent = true;
+        key = "<leader>fg";
+        action = "<cmd>lua require('telescope.builtin').live_grep({ search_dirs = vim.fn.systemlist('git ls-files')})<CR>";
+        options.silent = true;
+      }
+      {
+        key = "<leader>fG";
+        action = "<cmd>Telescope live_grep<CR>";
+        options.silent = true;
       }
       {
 	key = "<leader>fw";
-	action = "<cmd>telescope.builtin.grep_string({ search = <cword>, search_dirs = git ls-files })<CR>";
+	action = "<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>'), search_dirs = vim.fn.systemlist('git ls-files') })<CR>";
 	options.silent = true;
       }
       {
@@ -340,6 +345,16 @@
       {
         key = "<leader>gf";
         action = "<cmd>NvimTreeFindFile<CR>";
+        options.silent = true;
+      }
+      {
+        key = "[d";
+        action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
+        options.silent = true;
+      }
+      {
+        key = "]d";
+        action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
         options.silent = true;
       }
     ];
