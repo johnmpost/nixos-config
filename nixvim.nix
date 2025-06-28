@@ -71,8 +71,10 @@
     nvim-autopairs.enable = true;
     lspconfig.enable = true;
     cmp-nvim-lsp.enable = true;
-    comment = {
+    comment.enable = true;
+    lsp-signature = {
       enable = true;
+      settings.hint_enable = false;
     };
 
     conform-nvim = {
@@ -133,6 +135,14 @@
     lualine = {
       enable = true;
       settings.options.disabled_filetypes = [ "NvimTree" ];
+      settings.sections.lualine_b = [
+	"diff"
+	"diagnostics"
+      ];
+      settings.sections.lualine_c = [{
+	__unkeyed-1 = "filename";
+	path = 1;
+      }];
     };
 
     nvim-tree = {
@@ -166,6 +176,8 @@
       settings.sources = [
 	{ name = "hledger"; }
 	{ name = "nvim_lsp"; }
+	{ name = "path"; }
+	{ name = "buffer"; }
       ];
       settings.mapping = {
 	"<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
@@ -237,22 +249,22 @@
       }
       {
 	key = "<leader>ff";
-	action = "<cmd>Telescope find_files<CR>";
+	action = "<cmd>Telescope git_files<CR>";
 	options.silent = true;
       }
       {
-	key = "<leader>fa";
+	key = "<leader>fF";
 	action = "<cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<CR>";
 	options.silent = true;
       }
       {
 	key = "<leader>fg";
-	action = "<cmd>Telescope live_grep<CR>";
+	action = "<cmd>telescope.builtin.live_grep({ search_dirs = git ls-files })<CR>";
 	options.silent = true;
       }
       {
 	key = "<leader>fw";
-	action = "<cmd>Telescope grep_string<CR>";
+	action = "<cmd>telescope.builtin.grep_string({ search = <cword>, search_dirs = git ls-files })<CR>";
 	options.silent = true;
       }
       {
@@ -282,7 +294,7 @@
       }
       {
 	key = "<leader>k";
-	action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+	action = "<cmd>lua vim.diagnostic.open_float({ border = 'single' })<CR>";
 	options.silent = true;
       }
       {
@@ -290,5 +302,85 @@
 	action = "<cmd>lua vim.lsp.buf.code_action()<CR>";
 	options.silent = true;
       }
+      {
+        key = "<leader>gr";
+	action = "<cmd>lua require('telescope.builtin').lsp_references()<CR>";
+        options.silent = true;
+      }
+      {
+        key = "<leader>rn";
+        action = "<cmd>lua vim.lsp.buf.rename()<CR>";
+        options.silent = true;
+      }
+      {
+        key = "<leader>gd";
+        action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+        options.silent = true;
+      }
+      {
+      key = "K";
+      action = "<cmd>lua vim.lsp.buf.hover({ border = 'single'})<CR>";
+      options.silent = true;
+      }
+      {
+        key = "<leader>yp";
+        action = "<cmd>let @+ = expand('%')<CR>";
+        options.silent = true;
+      }
+      {
+        key = "<leader>/";
+        action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
+        options.silent = true;
+      }
+      {
+        key = "<leader>fr";
+        action = "<cmd>Telescope resume<CR>";
+        options.silent = true;
+      }
+      {
+        key = "<leader>gf";
+        action = "<cmd>NvimTreeFindFile<CR>";
+        options.silent = true;
+      }
     ];
+
+  extraConfigLua = ''
+  -- Make :bd and :q behave as usual when tree is visible
+  vim.api.nvim_create_autocmd({'BufEnter', 'QuitPre'}, {
+    nested = false,
+    callback = function(e)
+      local tree = require('nvim-tree.api').tree
+
+      -- Nothing to do if tree is not opened
+      if not tree.is_visible() then
+	return
+      end
+
+      -- How many focusable windows do we have? (excluding e.g. incline status window)
+      local winCount = 0
+      for _,winId in ipairs(vim.api.nvim_list_wins()) do
+	if vim.api.nvim_win_get_config(winId).focusable then
+	  winCount = winCount + 1
+	end
+      end
+
+      -- We want to quit and only one window besides tree is left
+      if e.event == 'QuitPre' and winCount == 2 then
+	vim.api.nvim_cmd({cmd = 'qall'}, {})
+      end
+
+      -- :bd was probably issued an only tree window is left
+      -- Behave as if tree was closed (see `:h :bd`)
+      if e.event == 'BufEnter' and winCount == 1 then
+	-- Required to avoid "Vim:E444: Cannot close last window"
+	vim.defer_fn(function()
+	  -- close nvim-tree: will go to the last buffer used before closing
+	  tree.toggle({find_file = true, focus = true})
+	  -- re-open nivm-tree
+	  tree.toggle({find_file = true, focus = false})
+	end, 10)
+      end
+    end
+  })
+  '';
 }
