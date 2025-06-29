@@ -323,9 +323,9 @@
         options.silent = true;
       }
       {
-      key = "K";
-      action = "<cmd>lua vim.lsp.buf.hover({ border = 'single'})<CR>";
-      options.silent = true;
+	key = "K";
+	action = "<cmd>lua vim.lsp.buf.hover({ border = 'single'})<CR>";
+	options.silent = true;
       }
       {
         key = "<leader>yp";
