@@ -18,7 +18,6 @@
     scrot
     ungoogled-chromium
     gnucash
-    hledger
     xclip
     nodejs_24
     keepassxc
