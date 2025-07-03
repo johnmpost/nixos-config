@@ -6,5 +6,8 @@
     safecrlf = warn
 [alias]
     prettylog = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    logs = log --oneline -n 5
+    logss = log --oneline -n 10
+    logsss = log --oneline -n 15
 [push]
     autoSetupRemote = true
