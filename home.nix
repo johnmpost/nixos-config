@@ -44,6 +44,8 @@
     imagemagick
     piper
     ddcutil
+    hledger
+    stremio
   ];
 
   programs = {
