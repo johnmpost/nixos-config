@@ -308,6 +308,11 @@
 	options.silent = true;
       }
       {
+	key = "<leader>sa";
+	action = "<cmd>vim.lsp.buf.code_action({ context = { only = { 'source' }, diagnostics = {} } })<CR>";
+	options.silent = true;
+      }
+      {
         key = "<leader>gr";
 	action = "<cmd>lua require('telescope.builtin').lsp_references()<CR>";
         options.silent = true;

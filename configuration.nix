@@ -44,6 +44,7 @@
   services.envfs.enable = true; # not sure what this line is for
   security.pam.services.i3lock.enable = true;
   programs.nix-ld.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
