@@ -309,7 +309,7 @@
       }
       {
 	key = "<leader>sa";
-	action = "<cmd>vim.lsp.buf.code_action({ context = { only = { 'source' }, diagnostics = {} } })<CR>";
+	action = "<cmd>lua vim.lsp.buf.code_action({ context = { only = { 'source' }, diagnostics = {} } })<CR>";
 	options.silent = true;
       }
       {
