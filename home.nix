@@ -46,6 +46,7 @@
     ddcutil
     hledger
     stremio
+    awscli2
   ];
 
   programs = {
@@ -350,6 +351,7 @@
     directories = [
       ".ssh"
       "dl"
+      ".aws"
       "repos"
       "files"
       ".mozilla/firefox/john/storage/default"
