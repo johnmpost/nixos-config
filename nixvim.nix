@@ -84,10 +84,13 @@
 	css = [ "prettier" ];
 	html = [ "prettier" ];
 	typescript = [ "prettier" ];
+	javascript = [ "prettier" ];
 	json = [ "prettier" ];
 	jsonc = [ "prettier" ];
 	ledger = [ "hledgerfmt" ];
 	markdown = [ "prettier" ];
+	javascriptreact = [ "prettier" ];
+	typescriptreact = [ "prettier" ];
 	"*" = [ "trim_newlines" ];
       };
 
