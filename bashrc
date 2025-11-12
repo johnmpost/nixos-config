@@ -87,8 +87,8 @@ files () {
     esac
 }
 
-maxbr () {
-  echo 255 | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
+br () {
+  echo "$1" | sudo tee /sys/class/backlight/amdgpu_bl1/brightness > /dev/null
 }
 
 gnc-txns () {
