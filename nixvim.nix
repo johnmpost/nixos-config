@@ -39,7 +39,9 @@
     servers.lua_ls.enable = true;
     servers.nil_ls.enable = true;
     servers.ts_ls.enable = true;
+    servers.sqls.enable = true;
     servers.jsonls.enable = true;
+    servers.tailwindcss.enable = true;
     servers.efm = {
       enable = true;
       settings.filetypes = { __unkeyed-1 = "ledger"; };
