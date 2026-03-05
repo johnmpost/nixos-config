@@ -67,4 +67,5 @@
   ];
 
   system.stateVersion = "24.11";
+  virtualisation.podman.enable = true;
 }
