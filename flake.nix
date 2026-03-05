@@ -24,14 +24,14 @@
 	impermanence.nixosModules.impermanence
 	home-manager.nixosModules.home-manager
 	{
-	  imports = [ home-manager.nixosModules.home-manager ];
+	  # imports = [ home-manager.nixosModules.home-manager ];
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
 	  home-manager.backupFileExtension = "backup";
 	  home-manager.extraSpecialArgs = { inherit inputs; };
 	  home-manager.users.john = { ... }: {
 	    imports = [
-	      impermanence.homeManagerModules.impermanence
+	      # impermanence.homeManagerModules.impermanence
 	      nixvim.homeManagerModules.nixvim
 	      ./home.nix
 	    ];

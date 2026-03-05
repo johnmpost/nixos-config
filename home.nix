@@ -12,11 +12,11 @@
     nerd-fonts.ubuntu
     nerd-fonts.ubuntu-mono
     python314
-    neofetch
+    fastfetch
     ripgrep
     tree
     scrot
-    ungoogled-chromium
+    # ungoogled-chromium
     gnucash
     xclip
     nodejs_24
@@ -37,7 +37,7 @@
     unzip
     feh
     proverif
-    wkhtmltopdf
+    # wkhtmltopdf
     rclone
     yt-dlp
     vlc
@@ -45,7 +45,7 @@
     piper
     ddcutil
     hledger
-    stremio
+    # stremio
     awscli2
     podman
     podman-compose
@@ -349,7 +349,7 @@
   home.file.".Xmodmap".source = ./Xmodmap;
   home.file.".config/rclone/rclone.conf".source = ./rclone.conf;
 
-  home.persistence."/nix/persist/home/john" = {
+  home.persistence."/nix/persist" = {
     directories = [
       ".ssh"
       "dl"
@@ -364,6 +364,5 @@
       ".mozilla/firefox/john/places.sqlite"
       ".mozilla/firefox/john/cookies.sqlite"
     ];
-    allowOther = true;
   };
 }
