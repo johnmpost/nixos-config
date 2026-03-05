@@ -93,6 +93,7 @@
 	markdown = [ "prettier" ];
 	javascriptreact = [ "prettier" ];
 	typescriptreact = [ "prettier" ];
+	sql = [ "pg_format" ];
 	"*" = [ "trim_newlines" ];
       };
 
