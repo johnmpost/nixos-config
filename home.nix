@@ -47,6 +47,8 @@
     hledger
     stremio
     awscli2
+    podman
+    podman-compose
   ];
 
   programs = {
