@@ -49,6 +49,7 @@
     awscli2
     podman
     podman-compose
+    postgresql
   ];
 
   programs = {
