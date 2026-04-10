@@ -16,7 +16,7 @@
     ripgrep
     tree
     scrot
-    # ungoogled-chromium
+    ungoogled-chromium
     gnucash
     xclip
     nodejs_24
