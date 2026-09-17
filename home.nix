@@ -62,15 +62,15 @@
     profiles.john = {
       search = {
 	force = true;
-	default = "ddgc";
-	privateDefault = "ddgc";
+	default = "google";
+	privateDefault = "google";
 	engines = {
 	  bing.metaData.hidden = true;
 	  ddg.metaData.hidden = true;
-	  google.metaData.hidden = true;
 	  wikipedia.metaData.hidden = true;
 	  amazon.metaData.hidden = true;
 	  ebay.metaData.hidden = true;
+	  perplexity.metaData.hidden = true;
 	  ddgc = {
 	    name = "DuckDuckGo (themed)";
 	    urls = [{ template = "https://duckduckgo.com/?k7=222222&kj=222222&kae=d&q={searchTerms}"; }];
