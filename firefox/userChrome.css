@@ -82,6 +82,13 @@
 
 #navigator-toolbox { border-bottom-color: rgb(34, 34, 34) !important; }
 
+/* teal outline on the selected tab */
+.tab-background[selected] {
+  outline: 1px solid rgb(35, 205, 179) !important;
+  outline-offset: -1px !important;
+  box-shadow: none !important;
+}
+
 /* sidebar header */
 #sidebar-box{ --sidebar-background-color: rgb(34, 34, 34) !important; }
 #sidebar-box{ --sidebar-text-color: rgb(170, 170, 170) !important; }
