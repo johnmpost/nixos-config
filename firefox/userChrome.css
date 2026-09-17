@@ -1,55 +1,83 @@
 /* requires built-in dark theme */
+
+/* Current Firefox variable names (verified against mozilla-central, 2026-09). */
 :root {
-  /* tab preview popup */
+  /* popups (tab preview, menus) */
+  --panel-background-color: rgb(34, 34, 34) !important;
+  --panel-border-color: rgb(34, 34, 34) !important;
+  --panel-text-color: rgb(170, 170, 170) !important;
+
+  /* toolbar icons, text, and bg */
+  --toolbarbutton-icon-fill: rgb(136, 136, 136) !important;
+  --toolbar-text-color: rgb(170, 170, 170) !important;
+  --toolbar-background-color: rgb(34, 34, 34) !important;
+
+  /* tab strip bg */
+  --toolbox-background-color: rgb(34, 34, 34) !important;
+  --toolbox-background-color-inactive: rgb(34, 34, 34) !important;
+
+  /* unselected tab text */
+  --toolbox-text-color: rgb(136, 136, 136) !important;
+  --toolbox-text-color-inactive: rgb(136, 136, 136) !important;
+  --tab-text-color: rgb(136, 136, 136) !important;
+  --tab-text-color-hover: rgb(170, 170, 170) !important;
+
+  /* selected tab text, bg, and outline */
+  --tab-text-color-selected: rgb(170, 170, 170) !important;
+  --tab-background-color-selected: rgb(34, 34, 34) !important;
+  --tab-border-color-selected: rgb(35, 205, 179) !important;
+
+  /* the loading spinner in new tabs */
+  --tab-icon-fill-loading: rgb(35, 205, 179) !important;
+
+  /* url bar border when unfocused and focused */
+  --toolbar-field-border-color: rgb(34, 34, 34) !important;
+  --toolbar-field-border-color-focus: rgb(35, 205, 179) !important;
+  --focus-outline-color: rgb(35, 205, 179) !important;
+  /* url bar background */
+  --toolbar-field-background-color: rgb(17, 17, 17) !important;
+  --toolbar-field-background-color-focus: rgb(17, 17, 17) !important;
+  /* url bar text */
+  --toolbar-field-text-color: rgb(255, 255, 255) !important;
+  --toolbar-field-text-color-focus: rgb(255, 255, 255) !important;
+
+  /* sidebar (history, etc) */
+  --sidebar-background-color: rgb(34, 34, 34) !important;
+  --sidebar-text-color: rgb(170, 170, 170) !important;
+
+  /* separator line above ctrl-f, maybe more */
+  --chrome-content-separator-color: rgb(34, 34, 34) !important;
+
+  /* not verified against current source; may do nothing */
+  --urlbarView-highlight-background: rgb(68, 68, 68) !important;
+  --input-bgcolor: rgb(68, 68, 68) !important;
+  --in-content-page-background: rgb(34, 34, 34) !important;
+}
+
+/* LEGACY names for Firefox before the 2025-2026 variable renames.
+   Safe to delete this whole block once the flake update is done and
+   the colors look right. */
+:root {
   --arrowpanel-background: rgb(34, 34, 34) !important;
   --arrowpanel-border-color: rgb(34, 34, 34) !important;
   --arrowpanel-color: rgb(170, 170, 170) !important;
   --arrowpanel-dimmed: rgba(0, 0, 0, 0.4) !important;
-
-  /* toolbar icons, text, and bg */
-  --toolbarbutton-icon-fill: rgb(136, 136, 136) !important;
   --toolbar-color: rgb(170, 170, 170) !important;
   --toolbar-bgcolor: rgb(34, 34, 34) !important;
-
-  /* tab line background color */
   --toolbox-bgcolor: rgb(34, 34, 34) !important;
   --toolbox-bgcolor-inactive: rgb(34, 34, 34) !important;
-
-  /* tab text and outline */
   --lwt-text-color: rgb(136, 136, 136) !important;
   --lwt-tab-line-color: rgb(35, 205, 179) !important;
   --lwt-tabs-border-color: olive !important;
-
-  /* selected tab text and bg */
   --tab-selected-textcolor: rgb(170, 170, 170) !important;
   --tab-selected-bgcolor: rgb(34, 34, 34) !important;
-
-  /* the loading spinner in new tabs */
   --tab-loading-fill: rgb(35, 205, 179) !important;
-
-  /* url bar border when unfocused and focused */
-  --toolbar-field-border-color: rgb(34, 34, 34) !important;
   --toolbar-field-focus-border-color: rgb(35, 205, 179) !important;
-  /* url bar background*/
-  --toolbar-field-background-color: rgb(17, 17, 17) !important;
   --toolbar-field-focus-background-color: rgb(17, 17, 17) !important;
-  /* url bar text */
   --toolbar-field-color: rgb(255, 255, 255) !important;
   --toolbar-field-focus-color: rgb(255, 255, 255) !important;
-  /* search popup highlight */
-  --urlbarView-highlight-background: rgb(68, 68, 68) !important;
-
-  /* sidebar (history, etc) */
   --lwt-sidebar-background-color: rgb(34, 34, 34) !important;
   --lwt-sidebar-text-color: rgb(170, 170, 170) !important;
-
-  /* new tab flash */
-  --in-content-page-background: rgb(34, 34, 34) !important;
-
-  /* maybe ctrl-f search bg */
-  --input-bgcolor: rgb(68, 68, 68) !important;
-  /* separator line above ctrl-f, maybe more */
-  --chrome-content-separator-color: rgb(34, 34, 34) !important;
 }
 
 #navigator-toolbox { border-bottom-color: rgb(34, 34, 34) !important; }
