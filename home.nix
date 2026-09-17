@@ -346,13 +346,11 @@
       ".aws"
       "repos"
       "files"
-      ".mozilla/firefox/john/storage/default"
+      ".mozilla/firefox/john"
       ".cache/mozilla/firefox/john"
     ];
     files = [
       ".bash_history"
-      ".mozilla/firefox/john/places.sqlite"
-      ".mozilla/firefox/john/cookies.sqlite"
     ];
   };
 }
