@@ -46,19 +46,20 @@
   };
   services.envfs.enable = true; # populates /usr/bin and /bin from PATH so hard-coded shebangs and paths like /usr/bin/dircolors work
 
-  networking.firewall.allowedUDPPorts = [ 45340 ];
-  networking.wireguard.enable = true;
-  networking.wireguard.interfaces.wg0 = {
-    ips = [ "192.168.2.2/32" ];
-    listenPort = 45340;
-    privateKeyFile = "/etc/wireguard/private";
-    peers = [{
-      publicKey = "W+ibWlojM0wHDb2e7uMgu26pLA1Cm/4CqDXcWzRDGkg=";
-      allowedIPs = [ "192.168.1.0/24" ];
-      endpoint = "173.233.47.202:45340";
-      persistentKeepalive = 25;
-    }];
-  };
+  # WireGuard client. Disabled until the key at /etc/wireguard/private exists again.
+  # networking.firewall.allowedUDPPorts = [ 45340 ];
+  # networking.wireguard.enable = true;
+  # networking.wireguard.interfaces.wg0 = {
+  #   ips = [ "192.168.2.2/32" ];
+  #   listenPort = 45340;
+  #   privateKeyFile = "/etc/wireguard/private";
+  #   peers = [{
+  #     publicKey = "W+ibWlojM0wHDb2e7uMgu26pLA1Cm/4CqDXcWzRDGkg=";
+  #     allowedIPs = [ "192.168.1.0/24" ];
+  #     endpoint = "173.233.47.202:45340";
+  #     persistentKeepalive = 25;
+  #   }];
+  # };
   security.pam.services.i3lock.enable = true;
   programs.nix-ld.enable = true;
   nixpkgs.config.allowUnfree = true;
