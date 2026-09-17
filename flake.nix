@@ -16,7 +16,6 @@
   outputs = inputs@{ self, nixpkgs, home-manager, impermanence, nixvim, ... }: {
     nixosConfigurations.john-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      # how to add unfree?
       specialArgs = { inherit inputs; };
 
       modules = [

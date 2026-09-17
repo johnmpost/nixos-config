@@ -360,12 +360,12 @@
       }
       {
         key = "[d";
-        action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
+        action = "<cmd>lua vim.diagnostic.jump({ count = -1, float = true })<CR>";
         options.silent = true;
       }
       {
         key = "]d";
-        action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
+        action = "<cmd>lua vim.diagnostic.jump({ count = 1, float = true })<CR>";
         options.silent = true;
       }
     ];

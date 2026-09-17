@@ -6,9 +6,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    vim
     alacritty
-    git
     nerd-fonts.ubuntu
     nerd-fonts.ubuntu-mono
     python314
@@ -22,7 +20,6 @@
     nodejs_24
     keepassxc
     ffmpeg_6
-    pulseaudio
     pavucontrol
     xss-lock
     i3lock
@@ -47,7 +44,6 @@
     hledger
     stremio-linux-shell
     awscli2
-    podman
     podman-compose
     postgresql
   ];
@@ -62,15 +58,6 @@
 
   programs.firefox = {
     enable = true;
-
-    policies = {
-      ExtensionSettings = {
-	"batterdarkerdocs@threethan.github.io" = {
-	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/better-darker-docs/latest.xpi";
-	  installation_mode = "force_installed";
-	};
-      };
-    };
 
     profiles.john = {
       search = {
@@ -97,6 +84,8 @@
 	ublock-origin
 	vimium
 	darkreader
+	bitwarden
+	better-darker-docs
       ];
       extensions.settings."uBlock0@raymondhill.net".settings = {
 	selectedFilterLists = [
@@ -178,7 +167,7 @@
 	# allow custom css for theming
 	"toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 	# customize toolbar
-	"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_8927f234-4dd9-48b1-bf76-44a9e153eee0_-browser-action"],"nav-bar":["back-button","forward-button","vertical-spacer","stop-reload-button","urlbar-container","downloads-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action","reset-pbm-toolbar-button","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","batterdarkerdocs_threethan_github_io-browser-action","addon_darkreader_org-browser-action","unified-extensions-button","_e8ffc3db-2875-4c7f-af38-d03e7f7f8ab9_-browser-action"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action","_testpilot-containers-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","_e8ffc3db-2875-4c7f-af38-d03e7f7f8ab9_-browser-action","batterdarkerdocs_threethan_github_io-browser-action","addon_darkreader_org-browser-action","_8927f234-4dd9-48b1-bf76-44a9e153eee0_-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list","vertical-tabs","unified-extensions-area"],"currentVersion":21,"newElementCount":12}'';
+	"browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","vertical-spacer","stop-reload-button","urlbar-container","downloads-button","ublock0_raymondhill_net-browser-action","reset-pbm-toolbar-button","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","batterdarkerdocs_threethan_github_io-browser-action","addon_darkreader_org-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["save-to-pocket-button","developer-button","ublock0_raymondhill_net-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","batterdarkerdocs_threethan_github_io-browser-action","addon_darkreader_org-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"],"dirtyAreaCache":["nav-bar","PersonalToolbar","toolbar-menubar","TabsToolbar","widget-overflow-fixed-list","vertical-tabs","unified-extensions-area"],"currentVersion":21,"newElementCount":12}'';
       };
 
       userChrome = builtins.readFile ./firefox/userChrome.css;
