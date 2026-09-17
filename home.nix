@@ -45,7 +45,7 @@
     piper
     ddcutil
     hledger
-    # stremio
+    stremio-linux-shell
     awscli2
     podman
     podman-compose
