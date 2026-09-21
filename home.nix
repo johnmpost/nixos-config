@@ -348,6 +348,7 @@
       "files"
       ".mozilla/firefox/john"
       ".cache/mozilla/firefox/john"
+      ".steam"
     ];
     files = [
       ".bash_history"
